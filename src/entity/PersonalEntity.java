@@ -72,7 +72,7 @@ public class PersonalEntity {
         return contratado;
     }
 
-    public void setContratado(BigInteger contratado) {
+    public void setContratado(BigInteger contratado) {          // cambio de prueba
         this.contratado = contratado;
     }
 
