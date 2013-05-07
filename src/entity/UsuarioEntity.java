@@ -1,23 +1,26 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Sebastián
- * Date: 03-05-13
- * Time: 02:47 PM
+ * Date: 07-05-13
+ * Time: 04:31 PM
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "USUARIO", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class UsuarioEntity {
+
     private int id;
+    private String nombreUsuario;
+    private String password;
 
     @javax.persistence.Column(name = "ID")
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_USUARIO")
+    @SequenceGenerator(name = "SEQ_USUARIO", sequenceName = "SEQ_USUARIO")
     public int getId() {
         return id;
     }
@@ -25,8 +28,6 @@ public class UsuarioEntity {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String nombreUsuario;
 
     @javax.persistence.Column(name = "NOMBRE_USUARIO")
     @Basic
@@ -37,8 +38,6 @@ public class UsuarioEntity {
     public void setNombreUsuario(String nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
     }
-
-    private String password;
 
     @javax.persistence.Column(name = "PASSWORD")
     @Basic

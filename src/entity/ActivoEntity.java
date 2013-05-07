@@ -1,24 +1,26 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.math.BigInteger;
+import javax.persistence.*;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Sebastián
- * Date: 03-05-13
- * Time: 02:47 PM
+ * Date: 07-05-13
+ * Time: 04:31 PM
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "ACTIVO", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class ActivoEntity {
-    private int id;
 
-    @javax.persistence.Column(name = "ID")
+    private int id;
+    private int valor;
+    private TipoActivoEntity tipoActivo;
+
+    @Column(name = "ID")
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ACTIVO")
+    @SequenceGenerator(name = "SEQ_ACTIVO", sequenceName = "SEQ_ACTIVO")
     public int getId() {
         return id;
     }
@@ -26,8 +28,6 @@ public class ActivoEntity {
     public void setId(int id) {
         this.id = id;
     }
-
-    private int valor;
 
     @javax.persistence.Column(name = "VALOR")
     @Basic
@@ -39,16 +39,14 @@ public class ActivoEntity {
         this.valor = valor;
     }
 
-    private BigInteger tipoActivoId;
-
-    @javax.persistence.Column(name = "TIPO_ACTIVO_ID")
-    @Basic
-    public BigInteger getTipoActivoId() {
-        return tipoActivoId;
+    @ManyToOne
+    @javax.persistence.JoinColumn(name = "TIPO_ACTIVO_ID", referencedColumnName = "ID", nullable = false)
+    public TipoActivoEntity getTipoActivo() {
+        return tipoActivo;
     }
 
-    public void setTipoActivoId(BigInteger tipoActivoId) {
-        this.tipoActivoId = tipoActivoId;
+    public void setTipoActivo(TipoActivoEntity tipoActivo) {
+        this.tipoActivo = tipoActivo;
     }
 
     @Override
@@ -60,7 +58,6 @@ public class ActivoEntity {
 
         if (id != that.id) return false;
         if (valor != that.valor) return false;
-        if (tipoActivoId != null ? !tipoActivoId.equals(that.tipoActivoId) : that.tipoActivoId != null) return false;
 
         return true;
     }
@@ -69,7 +66,6 @@ public class ActivoEntity {
     public int hashCode() {
         int result = id;
         result = 31 * result + valor;
-        result = 31 * result + (tipoActivoId != null ? tipoActivoId.hashCode() : 0);
         return result;
     }
 }

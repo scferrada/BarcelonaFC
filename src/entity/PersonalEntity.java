@@ -1,25 +1,34 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigInteger;
 import java.sql.Timestamp;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Sebastián
- * Date: 03-05-13
- * Time: 02:47 PM
+ * Date: 07-05-13
+ * Time: 04:31 PM
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "PERSONAL", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class PersonalEntity {
+
     private int id;
+    private String nombre;
+    private String apellido;
+    private Timestamp fechaNacimiento;
+    private BigInteger contratado;
+    private int valorBase;
+    private ContratoEntity contrato;
+    private TipoPersonalEntity tipoPersonal;
+    private NacionalidadEntity nacionalidad;
 
     @javax.persistence.Column(name = "ID")
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PERSONAL")
+    @SequenceGenerator(name = "SEQ_PERSONAL", sequenceName = "SEQ_PERSONAL")
     public int getId() {
         return id;
     }
@@ -27,8 +36,6 @@ public class PersonalEntity {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String nombre;
 
     @javax.persistence.Column(name = "NOMBRE")
     @Basic
@@ -40,8 +47,6 @@ public class PersonalEntity {
         this.nombre = nombre;
     }
 
-    private String apellido;
-
     @javax.persistence.Column(name = "APELLIDO")
     @Basic
     public String getApellido() {
@@ -51,8 +56,6 @@ public class PersonalEntity {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-
-    private Timestamp fechaNacimiento;
 
     @javax.persistence.Column(name = "FECHA_NACIMIENTO")
     @Basic
@@ -64,8 +67,6 @@ public class PersonalEntity {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    private BigInteger contratado;
-
     @javax.persistence.Column(name = "CONTRATADO")
     @Basic
     public BigInteger getContratado() {
@@ -75,8 +76,6 @@ public class PersonalEntity {
     public void setContratado(BigInteger contratado) {
         this.contratado = contratado;
     }
-
-    private int valorBase;
 
     @javax.persistence.Column(name = "VALOR_BASE")
     @Basic
@@ -88,40 +87,35 @@ public class PersonalEntity {
         this.valorBase = valorBase;
     }
 
-    private int tipoPersonalId;
-
-    @javax.persistence.Column(name = "TIPO_PERSONAL_ID")
-    @Basic
-    public int getTipoPersonalId() {
-        return tipoPersonalId;
+    @ManyToOne
+    @javax.persistence.JoinColumn(name = "CONTRATO_ID", referencedColumnName = "ID")
+    public ContratoEntity getContrato() {
+        return contrato;
     }
 
-    public void setTipoPersonalId(int tipoPersonalId) {
-        this.tipoPersonalId = tipoPersonalId;
+    public void setContrato(ContratoEntity contrato) {
+        this.contrato = contrato;
     }
 
-    private int nacionalidadId;
-
-    @javax.persistence.Column(name = "NACIONALIDAD_ID")
-    @Basic
-    public int getNacionalidadId() {
-        return nacionalidadId;
+    @ManyToOne
+    public
+    @javax.persistence.JoinColumn(name = "NACIONALIDAD_ID", referencedColumnName = "ID", nullable = false)
+    NacionalidadEntity getNacionalidad() {
+        return nacionalidad;
     }
 
-    public void setNacionalidadId(int nacionalidadId) {
-        this.nacionalidadId = nacionalidadId;
+    public void setNacionalidad(NacionalidadEntity nacionalidad) {
+        this.nacionalidad = nacionalidad;
     }
 
-    private int contratoId;
-
-    @javax.persistence.Column(name = "CONTRATO_ID")
-    @Basic
-    public int getContratoId() {
-        return contratoId;
+    @ManyToOne
+    @javax.persistence.JoinColumn(name = "TIPO_PERSONAL_ID", referencedColumnName = "ID", nullable = false)
+    public TipoPersonalEntity getTipoPersonal() {
+        return tipoPersonal;
     }
 
-    public void setContratoId(int contratoId) {
-        this.contratoId = contratoId;
+    public void setTipoPersonal(TipoPersonalEntity tipoPersonalByTipoPersonalId) {
+        this.tipoPersonal = tipoPersonalByTipoPersonalId;
     }
 
     @Override
@@ -131,18 +125,14 @@ public class PersonalEntity {
 
         PersonalEntity that = (PersonalEntity) o;
 
-        if (contratoId != that.contratoId) return false;
         if (id != that.id) return false;
-        if (nacionalidadId != that.nacionalidadId) return false;
-        if (tipoPersonalId != that.tipoPersonalId) return false;
         if (valorBase != that.valorBase) return false;
         if (apellido != null ? !apellido.equals(that.apellido) : that.apellido != null) return false;
         if (contratado != null ? !contratado.equals(that.contratado) : that.contratado != null) return false;
         if (fechaNacimiento != null ? !fechaNacimiento.equals(that.fechaNacimiento) : that.fechaNacimiento != null)
             return false;
-        if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
+        return !(nombre != null ? !nombre.equals(that.nombre) : that.nombre != null);
 
-        return true;
     }
 
     @Override
@@ -153,9 +143,6 @@ public class PersonalEntity {
         result = 31 * result + (fechaNacimiento != null ? fechaNacimiento.hashCode() : 0);
         result = 31 * result + (contratado != null ? contratado.hashCode() : 0);
         result = 31 * result + valorBase;
-        result = 31 * result + tipoPersonalId;
-        result = 31 * result + nacionalidadId;
-        result = 31 * result + contratoId;
         return result;
     }
 }

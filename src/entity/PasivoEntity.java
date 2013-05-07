@@ -1,24 +1,27 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigInteger;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Sebastián
- * Date: 03-05-13
- * Time: 02:47 PM
+ * Date: 07-05-13
+ * Time: 04:31 PM
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "PASIVO", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class PasivoEntity {
     private int id;
+    private int valor;
+    private BigInteger estadoPasivoId;
+    private EstadoPasivoEntity estadoPasivo;
 
     @javax.persistence.Column(name = "ID")
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PASIVO")
+    @SequenceGenerator(name = "SEQ_PASIVO", sequenceName = "SEQ_PASIVO")
     public int getId() {
         return id;
     }
@@ -26,8 +29,6 @@ public class PasivoEntity {
     public void setId(int id) {
         this.id = id;
     }
-
-    private int valor;
 
     @javax.persistence.Column(name = "VALOR")
     @Basic
@@ -39,8 +40,6 @@ public class PasivoEntity {
         this.valor = valor;
     }
 
-    private BigInteger estadoPasivoId;
-
     @javax.persistence.Column(name = "ESTADO_PASIVO_ID")
     @Basic
     public BigInteger getEstadoPasivoId() {
@@ -49,6 +48,16 @@ public class PasivoEntity {
 
     public void setEstadoPasivoId(BigInteger estadoPasivoId) {
         this.estadoPasivoId = estadoPasivoId;
+    }
+
+    @ManyToOne
+    @javax.persistence.JoinColumn(name = "ESTADO_PASIVO_ID", referencedColumnName = "ID", nullable = false)
+    public EstadoPasivoEntity getEstadoPasivo() {
+        return estadoPasivo;
+    }
+
+    public void setEstadoPasivo(EstadoPasivoEntity estadoPasivo) {
+        this.estadoPasivo = estadoPasivo;
     }
 
     @Override

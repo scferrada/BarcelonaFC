@@ -3,19 +3,24 @@ package entity;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.math.BigInteger;
+import java.util.Collection;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Sebastián
- * Date: 03-05-13
- * Time: 02:47 PM
+ * Date: 07-05-13
+ * Time: 04:31 PM
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "ESTADO_PASIVO", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class EstadoPasivoEntity {
+
     private BigInteger id;
+    private String estado;
+    private String descripcion;
 
     @javax.persistence.Column(name = "ID")
     @Id
@@ -27,8 +32,6 @@ public class EstadoPasivoEntity {
         this.id = id;
     }
 
-    private String estado;
-
     @javax.persistence.Column(name = "ESTADO")
     @Basic
     public String getEstado() {
@@ -38,8 +41,6 @@ public class EstadoPasivoEntity {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
-    private String descripcion;
 
     @javax.persistence.Column(name = "DESCRIPCION")
     @Basic

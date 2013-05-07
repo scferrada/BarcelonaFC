@@ -3,18 +3,22 @@ package entity;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Collection;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Sebastián
- * Date: 03-05-13
- * Time: 02:47 PM
+ * Date: 07-05-13
+ * Time: 04:31 PM
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "NACIONALIDAD", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class NacionalidadEntity {
+
     private int id;
+    private String pais;
 
     @javax.persistence.Column(name = "ID")
     @Id
@@ -25,8 +29,6 @@ public class NacionalidadEntity {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String pais;
 
     @javax.persistence.Column(name = "PAIS")
     @Basic
@@ -57,4 +59,5 @@ public class NacionalidadEntity {
         result = 31 * result + (pais != null ? pais.hashCode() : 0);
         return result;
     }
+
 }

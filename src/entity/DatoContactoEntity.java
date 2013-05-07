@@ -1,24 +1,27 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.math.BigInteger;
+import javax.persistence.*;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Sebastián
- * Date: 03-05-13
- * Time: 02:47 PM
+ * Date: 07-05-13
+ * Time: 04:31 PM
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "DATO_CONTACTO", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class DatoContactoEntity {
+
     private int id;
+    private String datoValor;
+    private SocioEntity socio;
+    private TipoContactoEntity tipoContacto;
 
     @javax.persistence.Column(name = "ID")
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_DATO_CONTACTO")
+    @SequenceGenerator(name = "SEQ_DATO_CONTACTO", sequenceName = "SEQ_DATO_CONTACTO")
     public int getId() {
         return id;
     }
@@ -26,8 +29,6 @@ public class DatoContactoEntity {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String datoValor;
 
     @javax.persistence.Column(name = "DATO_VALOR")
     @Basic
@@ -39,28 +40,24 @@ public class DatoContactoEntity {
         this.datoValor = datoValor;
     }
 
-    private BigInteger tipoContactoId;
-
-    @javax.persistence.Column(name = "TIPO_CONTACTO_ID")
-    @Basic
-    public BigInteger getTipoContactoId() {
-        return tipoContactoId;
+    @ManyToOne
+    @javax.persistence.JoinColumn(name = "SOCIO_ID", referencedColumnName = "ID", nullable = false)
+    public SocioEntity getSocio() {
+        return socio;
     }
 
-    public void setTipoContactoId(BigInteger tipoContactoId) {
-        this.tipoContactoId = tipoContactoId;
+    public void setSocio(SocioEntity socio) {
+        this.socio = socio;
     }
 
-    private int socioId;
-
-    @javax.persistence.Column(name = "SOCIO_ID")
-    @Basic
-    public int getSocioId() {
-        return socioId;
+    @ManyToOne
+    @javax.persistence.JoinColumn(name = "TIPO_CONTACTO_ID", referencedColumnName = "ID", nullable = false)
+    public TipoContactoEntity getTipoContacto() {
+        return tipoContacto;
     }
 
-    public void setSocioId(int socioId) {
-        this.socioId = socioId;
+    public void setTipoContacto(TipoContactoEntity tipoContacto) {
+        this.tipoContacto = tipoContacto;
     }
 
     @Override
@@ -71,10 +68,7 @@ public class DatoContactoEntity {
         DatoContactoEntity that = (DatoContactoEntity) o;
 
         if (id != that.id) return false;
-        if (socioId != that.socioId) return false;
         if (datoValor != null ? !datoValor.equals(that.datoValor) : that.datoValor != null) return false;
-        if (tipoContactoId != null ? !tipoContactoId.equals(that.tipoContactoId) : that.tipoContactoId != null)
-            return false;
 
         return true;
     }
@@ -83,8 +77,6 @@ public class DatoContactoEntity {
     public int hashCode() {
         int result = id;
         result = 31 * result + (datoValor != null ? datoValor.hashCode() : 0);
-        result = 31 * result + (tipoContactoId != null ? tipoContactoId.hashCode() : 0);
-        result = 31 * result + socioId;
         return result;
     }
 }

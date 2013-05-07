@@ -1,24 +1,29 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Collection;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Sebastián
- * Date: 03-05-13
- * Time: 02:47 PM
+ * Date: 07-05-13
+ * Time: 04:31 PM
  * To change this template use File | Settings | File Templates.
  */
 @javax.persistence.Table(name = "CONTRATO", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class ContratoEntity {
+
     private int id;
+    private Timestamp fechaInicio;
+    private Timestamp fechaExpiracion;
+    private int mensualidad;
 
     @javax.persistence.Column(name = "ID")
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CONTRATO")
+    @SequenceGenerator(name = "SEQ_CONTRATO", sequenceName = "SEQ_CONTRATO")
     public int getId() {
         return id;
     }
@@ -26,8 +31,6 @@ public class ContratoEntity {
     public void setId(int id) {
         this.id = id;
     }
-
-    private Timestamp fechaInicio;
 
     @javax.persistence.Column(name = "FECHA_INICIO")
     @Basic
@@ -39,8 +42,6 @@ public class ContratoEntity {
         this.fechaInicio = fechaInicio;
     }
 
-    private Timestamp fechaExpiracion;
-
     @javax.persistence.Column(name = "FECHA_EXPIRACION")
     @Basic
     public Timestamp getFechaExpiracion() {
@@ -50,8 +51,6 @@ public class ContratoEntity {
     public void setFechaExpiracion(Timestamp fechaExpiracion) {
         this.fechaExpiracion = fechaExpiracion;
     }
-
-    private int mensualidad;
 
     @javax.persistence.Column(name = "MENSUALIDAD")
     @Basic
