@@ -11,7 +11,7 @@ import javax.persistence.*;
  */
 @javax.persistence.Table(name = "USUARIO", schema = "BARCELONAFC", catalog = "")
 @Entity
-public class UsuarioEntity {
+public class UsuarioEntity{
 
     private int id;
     private String nombreUsuario;
