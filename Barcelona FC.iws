@@ -62,10 +62,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/IDao.java">
+      <file leaf-file-name="ContratoDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/ContratoDaoImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+            <state line="12" column="95" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/AbstractDao.java">
+      <file leaf-file-name="DatoContactoDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/DatoContactoDaoImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="176" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+            <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HibernateUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/HibernateUtil.java">
+      <file leaf-file-name="EstadoPasivoDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/EstadoPasivoDaoImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="18" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+            <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,28 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoPasivoEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/EstadoPasivoEntity.java">
+      <file leaf-file-name="NacionalidadDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/NacionalidadDaoImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="33" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PasivoEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/PasivoEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="21" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FirstTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/dao/FirstTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="15" selection-start="557" selection-end="557" vertical-scroll-proportion="0.45964912">
+            <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,19 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/UsuarioDao.java">
+      <file leaf-file-name="PasivoDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/PasivoDaoImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="17" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/UsuarioDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="92" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+            <state line="12" column="89" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,20 +117,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <file leaf-file-name="PersonalDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/PersonalDaoImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="50" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="12" column="95" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/UsuarioEntity.java">
+      <file leaf-file-name="SocioDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/SocioDaoImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="12" column="86" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoActivoDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoActivoDaoImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="101" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoContactoDaoImp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoContactoDaoImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoPersonalDaoImp.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoPersonalDaoImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.37847868">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,22 +182,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/entity/TipoPersonalEntity.java" />
-        <option value="$PROJECT_DIR$/src/entity/ActivoEntity.java" />
-        <option value="$PROJECT_DIR$/src/entity/ContratoEntity.java" />
-        <option value="$PROJECT_DIR$/src/entity/DatoContactoEntity.java" />
-        <option value="$PROJECT_DIR$/src/entity/PersonalEntity.java" />
-        <option value="$PROJECT_DIR$/src/entity/SocioEntity.java" />
-        <option value="$PROJECT_DIR$/src/entity/UsuarioEntity.java" />
-        <option value="$PROJECT_DIR$/src/dao/AbstractDao.java" />
-        <option value="$PROJECT_DIR$/src/dao/UsuarioDao.java" />
-        <option value="$PROJECT_DIR$/src/dao/impl/UsuarioDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/entity/PasivoEntity.java" />
-        <option value="$PROJECT_DIR$/src/dao/IDao.java" />
-        <option value="$PROJECT_DIR$/src/util/HibernateUtil.java" />
-        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/dao/impl/AbstractDao.java" />
-        <option value="$PROJECT_DIR$/test/dao/FirstTest.java" />
+        <option value="$PROJECT_DIR$/src/dao/TipoActivoDa.java" />
+        <option value="$PROJECT_DIR$/src/dao/TipoActivoDao.java" />
+        <option value="$PROJECT_DIR$/src/dao/TipoContactoDao.java" />
+        <option value="$PROJECT_DIR$/src/dao/TipoPersonalDao.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/ActivoDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/ActivoDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/ContratoDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/DatoContactoDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/EstadoPasivoDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/NacionalidadDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/PasivoDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/PersonalDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/SocioDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/TipoActivoDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/TipoContactoDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/dao/impl/TipoPersonalDaoImp.java" />
       </list>
     </option>
   </component>
@@ -231,6 +241,20 @@
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Barcelona FC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Barcelona FC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -323,7 +347,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,22 +365,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Barcelona FC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Barcelona FC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -372,8 +426,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Persistence.ERD.MergeInherited" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Persistence.ERD.MergeInherited" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
@@ -442,24 +496,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -493,6 +529,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -506,6 +560,20 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="WebLogic Instance" factoryName="Local">
+      <option name="PORT" value="7001" />
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="WEBLOGIC_DOMAIN_LOG_FILE" enabled="true" />
+      <predefined_log_file id="WEBLOGIC_SERVER_LOG_FILE" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -532,20 +600,6 @@
       </option>
       <envs />
       <patterns />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="WebLogic Instance" factoryName="Local">
-      <option name="PORT" value="7001" />
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="WEBLOGIC_DOMAIN_LOG_FILE" enabled="true" />
-      <predefined_log_file id="WEBLOGIC_SERVER_LOG_FILE" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -661,7 +715,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -677,19 +731,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27389985" sideWeight="0.24315068" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27348486" sideWeight="0.5650685" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27272728" sideWeight="0.5650685" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43493152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -752,122 +806,134 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-4.1.1.Final.jar!/org/hibernate/cfg/AnnotationConfiguration.class">
+    <entry file="file://$PROJECT_DIR$/src/dao/SocioDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="200" selection-end="223" vertical-scroll-proportion="0.27145708">
+        <state line="11" column="50" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-4.1.1.Final.jar!/org/hibernate/cfg/Configuration.class">
+    <entry file="file://$PROJECT_DIR$/src/dao/TipoActivoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="97" selection-start="13262" selection-end="13277" vertical-scroll-proportion="-2.32">
+        <state line="11" column="17" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/DatoContactoEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/TipoContactoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="48" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+        <state line="11" column="64" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/PersonalEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/TipoPersonalDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="74" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/SocioEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="68" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-4.1.1.Final.jar!/org/hibernate/SessionFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="487" selection-end="487" vertical-scroll-proportion="0.34824902">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/EstadoPasivoEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="33" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/PasivoEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="21" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
+        <state line="11" column="64" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/impl/UsuarioDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="92" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/UsuarioDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+        <state line="13" column="92" selection-start="275" selection-end="340" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/UsuarioEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/ActivoDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+        <state line="12" column="89" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/ContratoDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="50" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/IDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+        <state line="12" column="95" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/AbstractDao.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/DatoContactoDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="176" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+        <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/dao/FirstTest.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/EstadoPasivoDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="15" selection-start="557" selection-end="557" vertical-scroll-proportion="0.45964912">
+        <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/NacionalidadDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/PasivoDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="89" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/PersonalDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="95" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/SocioDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="86" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoActivoDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="101" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoContactoDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoPersonalDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="107" selection-start="348" selection-end="348" vertical-scroll-proportion="0.37847868">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
