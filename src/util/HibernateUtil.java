@@ -20,7 +20,7 @@ public class HibernateUtil {
     static {
         try{
             Configuration configuration = new Configuration();
-            configuration.configure();
+            configuration.configure("hibernate.cfg.xml");
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
             sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         }catch (Throwable ex){
@@ -31,27 +31,4 @@ public class HibernateUtil {
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
-
-    public static Session beginTransaction() {
-        Session hibernateSession = HibernateUtil.getSession();
-        hibernateSession.beginTransaction();
-        return hibernateSession;
-    }
-
-    public static void commit() {
-        HibernateUtil.getSession().getTransaction().commit();
-    }
-
-    public static void rollback() {
-        HibernateUtil.getSession().getTransaction().rollback();
-    }
-
-    public static void closeSession() {
-        HibernateUtil.getSession().close();
-    }
-
-    public static Session getSession() {
-        return sessionFactory.getCurrentSession();
-    }
-
 }

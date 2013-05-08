@@ -25,8 +25,8 @@ public interface IDao<T, ID extends Serializable> {
 
     public T findOne(Query query);
 
-    public List findAll(Class clazz);
+    public List<T> findAll(Class<T> clazz);
 
-    public T findByID(Class clazz, BigDecimal id);
+    public T findByID(Class<T> clazz, Integer id);
 
 }

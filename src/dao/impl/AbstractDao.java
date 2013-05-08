@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import util.HibernateUtil;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -19,12 +18,21 @@ import java.util.List;
 public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T, ID> {
 
     protected Session getSession() {
-        return HibernateUtil.getSession();
+        return HibernateUtil.getSessionFactory().openSession();
     }
 
     public void save(T entity) {
         Session hibernateSession = this.getSession();
-        hibernateSession.saveOrUpdate(entity);
+        hibernateSession.beginTransaction();
+        try{
+            hibernateSession.save(entity);
+            hibernateSession.getTransaction().commit();
+            System.out.println("saved!");
+        }catch (Exception ex){
+            hibernateSession.getTransaction().rollback();
+            ex.printStackTrace();
+        }
+        hibernateSession.close();
     }
 
     public void merge(T entity) {
@@ -48,15 +56,17 @@ public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T,
         return t;
     }
 
-    public T findByID(Class clazz, BigDecimal id) {
+    public T findByID(Class<T> clazz, Integer id) {
         Session hibernateSession = this.getSession();
         T t = (T) hibernateSession.get(clazz, id);
         return t;
     }
 
-    public List findAll(Class clazz) {
+    public List<T> findAll(Class<T> clazz) {
         Session hibernateSession = this.getSession();
         Query query = hibernateSession.createQuery("from " + clazz.getName());
-        return query.list();
+        List<T> res =  query.list();
+        hibernateSession.close();
+        return res;
     }
 }

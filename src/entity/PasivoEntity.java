@@ -15,7 +15,6 @@ import java.math.BigInteger;
 public class PasivoEntity {
     private int id;
     private int valor;
-    private BigInteger estadoPasivoId;
     private EstadoPasivoEntity estadoPasivo;
 
     @javax.persistence.Column(name = "ID")
@@ -40,16 +39,6 @@ public class PasivoEntity {
         this.valor = valor;
     }
 
-    @javax.persistence.Column(name = "ESTADO_PASIVO_ID")
-    @Basic
-    public BigInteger getEstadoPasivoId() {
-        return estadoPasivoId;
-    }
-
-    public void setEstadoPasivoId(BigInteger estadoPasivoId) {
-        this.estadoPasivoId = estadoPasivoId;
-    }
-
     @ManyToOne
     @javax.persistence.JoinColumn(name = "ESTADO_PASIVO_ID", referencedColumnName = "ID", nullable = false)
     public EstadoPasivoEntity getEstadoPasivo() {
@@ -69,8 +58,6 @@ public class PasivoEntity {
 
         if (id != that.id) return false;
         if (valor != that.valor) return false;
-        if (estadoPasivoId != null ? !estadoPasivoId.equals(that.estadoPasivoId) : that.estadoPasivoId != null)
-            return false;
 
         return true;
     }
@@ -79,7 +66,6 @@ public class PasivoEntity {
     public int hashCode() {
         int result = id;
         result = 31 * result + valor;
-        result = 31 * result + (estadoPasivoId != null ? estadoPasivoId.hashCode() : 0);
         return result;
     }
 }

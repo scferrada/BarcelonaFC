@@ -1,5 +1,7 @@
 package dao.impl;
 
+import dao.IDao;
+import dao.UsuarioDao;
 import entity.UsuarioEntity;
 
 /**
@@ -9,5 +11,5 @@ import entity.UsuarioEntity;
  * Time: 06:19 PM
  * To change this template use File | Settings | File Templates.
  */
-public class UsuarioDaoImp extends AbstractDao<UsuarioEntity, Integer> {
+public class UsuarioDaoImp extends AbstractDao<UsuarioEntity, Integer> implements UsuarioDao{
 }
