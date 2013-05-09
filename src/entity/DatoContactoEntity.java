@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Entity
 public class DatoContactoEntity {
 
-    private int id;
+    private Integer id;
     private String datoValor;
     private SocioEntity socio;
     private TipoContactoEntity tipoContacto;

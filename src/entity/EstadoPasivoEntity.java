@@ -18,17 +18,17 @@ import java.util.Collection;
 @Entity
 public class EstadoPasivoEntity {
 
-    private BigInteger id;
+    private Integer id;
     private String estado;
     private String descripcion;
 
     @javax.persistence.Column(name = "ID")
     @Id
-    public BigInteger getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
