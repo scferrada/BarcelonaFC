@@ -67,84 +67,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PersonalDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/PersonalDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocioDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/SocioDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TipoActivoDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoActivoDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TipoContactoDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoContactoDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TipoPersonalDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoPersonalDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsuarioDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/UsuarioDaoImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivoEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/ActivoEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="24" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ContratoEntity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entity/ContratoEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="37" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0">
+            <state line="29" column="27" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatoContactoEntity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/entity/DatoContactoEntity.java">
+      <file leaf-file-name="TipoActivoEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/TipoActivoEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="16" selection-start="375" selection-end="375" vertical-scroll-proportion="0.42141622">
+            <state line="20" column="13" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocioEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/SocioEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="29" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoContactoEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/TipoContactoEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="13" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoPersonalEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/TipoPersonalEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="29" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsuarioEntity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/entity/UsuarioEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="29" selection-start="704" selection-end="704" vertical-scroll-proportion="0.74438685">
               <folding />
             </state>
           </provider>
@@ -154,6 +125,33 @@
         <entry file="file://$PROJECT_DIR$/src/entity/EstadoPasivoEntity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="26" column="17" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NacionalidadEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/NacionalidadEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="21" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasivoEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/PasivoEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="31" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonalEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/PersonalEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="36" selection-start="2531" selection-end="2531" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,22 +167,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/controller/impl/SocioBeanImpl.java" />
-        <option value="$PROJECT_DIR$/src/controller/impl/UsuarioBeanImpl.java" />
-        <option value="$PROJECT_DIR$/src/controller/SocioBean.java" />
-        <option value="$PROJECT_DIR$/src/controller/UsuarioBean.java" />
-        <option value="$PROJECT_DIR$/src/controller/ActivoBean.java" />
-        <option value="$PROJECT_DIR$/src/controller/impl/ActivoBeanImpl.java" />
-        <option value="$PROJECT_DIR$/src/controller/PasivoBean.java" />
-        <option value="$PROJECT_DIR$/src/controller/ContratoBean.java" />
         <option value="$PROJECT_DIR$/src/controller/PersonalBean.java" />
         <option value="$PROJECT_DIR$/src/controller/impl/PersonalBeanImpl.java" />
         <option value="$PROJECT_DIR$/src/controller/impl/PasivoBeanImpl.java" />
         <option value="$PROJECT_DIR$/src/controller/impl/ContratoBeanImpl.java" />
-        <option value="$PROJECT_DIR$/src/entity/DatoContactoEntity.java" />
         <option value="$PROJECT_DIR$/src/entity/EstadoPasivoEntity.java" />
         <option value="$PROJECT_DIR$/src/entity/ActivoEntity.java" />
         <option value="$PROJECT_DIR$/src/entity/ContratoEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/DatoContactoEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/NacionalidadEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/PasivoEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/PersonalEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/SocioEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/TipoActivoEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/TipoContactoEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/TipoPersonalEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/UsuarioEntity.java" />
       </list>
     </option>
   </component>
@@ -635,7 +633,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -712,62 +710,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/ContratoDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/ActivoDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/DatoContactoDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/EstadoPasivoDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/NacionalidadDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/PasivoDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/PersonalDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/SocioDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoActivoDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
@@ -798,6 +740,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/ActivoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="19" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/DatoContactoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="29" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/EstadoPasivoEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="17" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
@@ -805,23 +761,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/ActivoEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/NacionalidadEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="24" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
+        <state line="26" column="21" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/PasivoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="31" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/ContratoEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="37" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0">
+        <state line="29" column="27" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/DatoContactoEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/PersonalEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="375" selection-end="375" vertical-scroll-proportion="0.42141622">
+        <state line="99" column="36" selection-start="2531" selection-end="2531" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/SocioEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="29" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/TipoActivoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/TipoContactoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/TipoPersonalEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="29" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/UsuarioEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="29" selection-start="704" selection-end="704" vertical-scroll-proportion="0.74438685">
           <folding />
         </state>
       </provider>

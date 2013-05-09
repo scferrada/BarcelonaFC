@@ -15,7 +15,7 @@ import java.sql.Timestamp;
 @Entity
 public class SocioEntity {
 
-    private int id;
+    private Integer id;
     private String nombre;
     private String apellido;
     private Timestamp fechaNacimiento;
@@ -27,11 +27,11 @@ public class SocioEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_SOCIO")
     @SequenceGenerator(name = "SEQ_SOCIO", sequenceName = "SEQ_SOCIO")
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

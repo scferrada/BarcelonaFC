@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Entity
 public class UsuarioEntity{
 
-    private int id;
+    private Integer id;
     private String nombreUsuario;
     private String password;
 
@@ -21,11 +21,11 @@ public class UsuarioEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_USUARIO")
     @SequenceGenerator(name = "SEQ_USUARIO", sequenceName = "SEQ_USUARIO")
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

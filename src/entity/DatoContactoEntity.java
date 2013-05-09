@@ -22,11 +22,11 @@ public class DatoContactoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_DATO_CONTACTO")
     @SequenceGenerator(name = "SEQ_DATO_CONTACTO", sequenceName = "SEQ_DATO_CONTACTO")
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

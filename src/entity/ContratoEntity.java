@@ -23,11 +23,11 @@ public class ContratoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CONTRATO")
     @SequenceGenerator(name = "SEQ_CONTRATO", sequenceName = "SEQ_CONTRATO")
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -53,11 +53,11 @@ public class ContratoEntity {
 
     @javax.persistence.Column(name = "MENSUALIDAD")
     @Basic
-    public int getMensualidad() {
+    public Integer getMensualidad() {
         return mensualidad;
     }
 
-    public void setMensualidad(int mensualidad) {
+    public void setMensualidad(Integer mensualidad) {
         this.mensualidad = mensualidad;
     }
 
