@@ -2,6 +2,7 @@ package dao.impl;
 
 import dao.IDao;
 import dao.PersonalDao;
+import entity.ContratoEntity;
 import entity.NacionalidadEntity;
 import entity.PersonalEntity;
 import entity.TipoPersonalEntity;
@@ -124,5 +125,12 @@ public class PersonalDaoImp extends AbstractDao<PersonalEntity, Integer> impleme
             dao.delete(personalEntity);
             dao.delete(personalEntity.getContrato());
         }
+    }
+
+    @Override
+    public PersonalEntity getPersonalByContrato(ContratoEntity contrato) {
+        String query = "select p from PersonalEntity p where p.contrato = :contrato";
+        Query q = HibernateUtil.getSessionFactory().openSession().createQuery(query).setParameter("contrato", contrato);
+        return this.findOne(q);
     }
 }

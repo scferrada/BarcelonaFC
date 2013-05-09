@@ -11,7 +11,5 @@ import entity.UsuarioEntity;
  */
 public interface UsuarioDao extends IDao<UsuarioEntity, Integer> {
 
-    public void deleteById(int id);
-    public void deleteByName(String name);
-
+    public UsuarioEntity findByUserName(String username);
 }

@@ -15,16 +15,12 @@ import util.HibernateUtil;
  */
 public class UsuarioDaoImp extends AbstractDao<UsuarioEntity, Integer> implements UsuarioDao{
 
-    public void deleteById(int id){
-        String query = "delete from UsuarioEntity u where u.id =: id";
-        Query q = HibernateUtil.getSession().createQuery(query).setParameter("id",id);
-        q.executeUpdate();
+    @Override
+    public UsuarioEntity findByUserName(String username) {
+        String sql = "select u from UsuarioEntity u where u.nombreUsuario = :username";
+        Query query = HibernateUtil.createQuery(sql).setParameter("username", username);
+        UsuarioEntity found = this.findOne(query);
+        HibernateUtil.closeSession();
+        return found;
     }
-
-    public void deleteByName(String name){
-        String query = "delete from UsuarioEntity u where u.nombreUsuario =: name";
-        Query q = HibernateUtil.getSession().createQuery(query).setParameter("name",name);
-        q.executeUpdate();
-    }
-
 }

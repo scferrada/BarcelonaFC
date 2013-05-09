@@ -1,5 +1,6 @@
 package dao;
 
+import entity.ContratoEntity;
 import entity.NacionalidadEntity;
 import entity.PersonalEntity;
 import entity.TipoPersonalEntity;
@@ -28,4 +29,5 @@ public interface PersonalDao extends IDao<PersonalEntity, Integer> {
     public void deleteByType(String type);
     public void deleteByNation(String nation);
 
+    PersonalEntity getPersonalByContrato(ContratoEntity contrato);
 }

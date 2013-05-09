@@ -3,6 +3,7 @@ package dao.impl;
 import dao.IDao;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import util.HibernateUtil;
 
 import java.io.Serializable;
@@ -25,7 +26,7 @@ public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T,
         Session hibernateSession = this.getSession();
         hibernateSession.beginTransaction();
         try{
-            hibernateSession.save(entity);
+            hibernateSession.saveOrUpdate(entity);
             hibernateSession.getTransaction().commit();
             System.out.println("saved!");
         }catch (Exception ex){
@@ -37,12 +38,26 @@ public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T,
 
     public void merge(T entity) {
         Session hibernateSession = this.getSession();
-        hibernateSession.merge(entity);
+        hibernateSession.beginTransaction();
+        try{
+            hibernateSession.merge(entity);
+            hibernateSession.getTransaction().commit();
+        }catch (Exception ex){
+            hibernateSession.getTransaction().rollback();
+        }
+        hibernateSession.close();
     }
 
     public void delete(T entity) {
         Session hibernateSession = this.getSession();
-        hibernateSession.delete(entity);
+        Transaction tx = hibernateSession.getTransaction();
+        tx.begin();
+        try{
+            hibernateSession.delete(entity);
+            tx.commit();
+        }catch (Exception ex){
+
+        }
     }
 
     public List<T> findMany(Query query) {
@@ -59,6 +74,7 @@ public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T,
     public T findByID(Class<T> clazz, Integer id) {
         Session hibernateSession = this.getSession();
         T t = (T) hibernateSession.get(clazz, id);
+        hibernateSession.close();
         return t;
     }
 
