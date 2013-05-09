@@ -14,15 +14,4 @@ import java.sql.Timestamp;
  */
 public interface SocioDao extends IDao<SocioEntity, Integer> {
 
-    public void save(SocioEntity socioEntity);
-
-    public void delete(SocioEntity socioEntity);
-    public void deleteById(int id);
-    public void deleteByNation(String nation);
-    public void deleteByName(String name);
-    public void deleteByLastName(String lastName);
-    public void deleteByBirth(Timestamp birth);
-    public void deleteByHired(BigInteger seat);
-    public void deleteByContact(String dato);
-
 }
