@@ -2,7 +2,6 @@ package entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Collection;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,10 +14,10 @@ import java.util.Collection;
 @Entity
 public class ContratoEntity {
 
-    private int id;
+    private Integer id;
     private Timestamp fechaInicio;
     private Timestamp fechaExpiracion;
-    private int mensualidad;
+    private Integer mensualidad;
 
     @javax.persistence.Column(name = "ID")
     @Id
@@ -63,6 +62,14 @@ public class ContratoEntity {
     }
 
 
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (fechaInicio != null ? fechaInicio.hashCode() : 0);
+        result = 31 * result + (fechaExpiracion != null ? fechaExpiracion.hashCode() : 0);
+        result = 31 * result + mensualidad;
+        return result;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -71,21 +78,12 @@ public class ContratoEntity {
 
         ContratoEntity that = (ContratoEntity) o;
 
-        if (id != that.id) return false;
-        if (mensualidad != that.mensualidad) return false;
         if (fechaExpiracion != null ? !fechaExpiracion.equals(that.fechaExpiracion) : that.fechaExpiracion != null)
             return false;
         if (fechaInicio != null ? !fechaInicio.equals(that.fechaInicio) : that.fechaInicio != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (mensualidad != null ? !mensualidad.equals(that.mensualidad) : that.mensualidad != null) return false;
 
         return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (fechaInicio != null ? fechaInicio.hashCode() : 0);
-        result = 31 * result + (fechaExpiracion != null ? fechaExpiracion.hashCode() : 0);
-        result = 31 * result + mensualidad;
-        return result;
     }
 }

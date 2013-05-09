@@ -13,29 +13,29 @@ import javax.persistence.*;
 @Entity
 public class ActivoEntity {
 
-    private int id;
-    private int valor;
+    private Integer id;
+    private Integer valor;
     private TipoActivoEntity tipoActivo;
 
     @Column(name = "ID")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ACTIVO")
     @SequenceGenerator(name = "SEQ_ACTIVO", sequenceName = "SEQ_ACTIVO")
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     @javax.persistence.Column(name = "VALOR")
     @Basic
-    public int getValor() {
+    public Integer getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(Integer valor) {
         this.valor = valor;
     }
 
