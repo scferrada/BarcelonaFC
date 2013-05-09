@@ -75,7 +75,7 @@ public class SocioEntity {
         this.derechoAsiento = derechoAsiento;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "CONTRATO_ID", referencedColumnName = "ID", nullable = false)
     public ContratoEntity getContrato() {
         return contrato;

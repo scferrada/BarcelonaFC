@@ -13,5 +13,4 @@ import java.math.BigInteger;
  * To change this template use File | Settings | File Templates.
  */
 public class SocioDaoImp extends AbstractDao<SocioEntity, Integer> implements SocioDao {
-
 }

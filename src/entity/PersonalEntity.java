@@ -3,6 +3,7 @@ package entity;
 import javax.persistence.*;
 import java.math.BigInteger;
 import java.sql.Timestamp;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,6 +25,19 @@ public class PersonalEntity {
     private ContratoEntity contrato;
     private TipoPersonalEntity tipoPersonal;
     private NacionalidadEntity nacionalidad;
+    @Transient
+    private static Map<String, Double> factors;
+
+    static {
+        factors.put("arquero", 1.0);
+        factors.put("defenza", 1.2);
+        factors.put("mediocampista", 1.5);
+        factors.put("delantero", 2.0);
+        factors.put("fisioterapeuta", 0.0);
+        factors.put("doctor", 0.0);
+        factors.put("directivo", 0.0);
+        factors.put("tecnico", 0.0);
+    }
 
     @javax.persistence.Column(name = "ID")
     @Id
@@ -73,7 +87,7 @@ public class PersonalEntity {
         return contratado;
     }
 
-    public void setContratado(BigInteger contratado) {          // cambio de prueba
+    public void setContratado(BigInteger contratado) {
         this.contratado = contratado;
     }
 
@@ -87,7 +101,7 @@ public class PersonalEntity {
         this.valorBase = valorBase;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @javax.persistence.JoinColumn(name = "CONTRATO_ID", referencedColumnName = "ID")
     public ContratoEntity getContrato() {
         return contrato;
@@ -98,9 +112,8 @@ public class PersonalEntity {
     }
 
     @ManyToOne
-    public
     @javax.persistence.JoinColumn(name = "NACIONALIDAD_ID", referencedColumnName = "ID", nullable = false)
-    NacionalidadEntity getNacionalidad() {
+    public NacionalidadEntity getNacionalidad() {
         return nacionalidad;
     }
 
@@ -116,6 +129,14 @@ public class PersonalEntity {
 
     public void setTipoPersonal(TipoPersonalEntity tipoPersonalByTipoPersonalId) {
         this.tipoPersonal = tipoPersonalByTipoPersonalId;
+    }
+
+    @Transient
+    public double getValorMercado(){
+        return factors.get(tipoPersonal.getTipo())*valorBase;
+    }
+    public void setValorMercado(double valorMercado){
+        this.valorBase = (int) (valorMercado/factors.get(tipoPersonal.getTipo()));
     }
 
     @Override

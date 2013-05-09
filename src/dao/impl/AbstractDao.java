@@ -56,8 +56,9 @@ public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T,
             hibernateSession.delete(entity);
             tx.commit();
         }catch (Exception ex){
-
+            tx.rollback();
         }
+        hibernateSession.close();
     }
 
     public List<T> findMany(Query query) {

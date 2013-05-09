@@ -1,11 +1,9 @@
 package dao.impl;
 
+import dao.ContratoDao;
 import dao.IDao;
 import dao.PersonalDao;
-import entity.ContratoEntity;
-import entity.NacionalidadEntity;
-import entity.PersonalEntity;
-import entity.TipoPersonalEntity;
+import entity.*;
 import org.hibernate.Query;
 import util.HibernateUtil;
 
@@ -21,5 +19,4 @@ import java.util.Iterator;
  * To change this template use File | Settings | File Templates.
  */
 public class PersonalDaoImp extends AbstractDao<PersonalEntity, Integer> implements PersonalDao {
-
 }
