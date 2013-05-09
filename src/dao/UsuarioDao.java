@@ -10,4 +10,8 @@ import entity.UsuarioEntity;
  * To change this template use File | Settings | File Templates.
  */
 public interface UsuarioDao extends IDao<UsuarioEntity, Integer> {
+
+    public void deleteById(int id);
+    public void deleteByName(String name);
+
 }

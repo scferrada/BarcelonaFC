@@ -10,4 +10,9 @@ import entity.ActivoEntity;
  * To change this template use File | Settings | File Templates.
  */
 public interface ActivoDao extends IDao<ActivoEntity, Integer>{
+
+    public void deleteById(int id);
+    public void deleteByValue(int value);
+    public void deletByType(String type);
+
 }

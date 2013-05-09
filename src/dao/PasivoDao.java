@@ -10,4 +10,9 @@ import entity.PasivoEntity;
  * To change this template use File | Settings | File Templates.
  */
 public interface PasivoDao extends IDao<PasivoEntity, Integer> {
+
+    public void deleteById(int id);
+    public void deleteByValue(int value);
+    public void deletByState(String state);
+
 }
