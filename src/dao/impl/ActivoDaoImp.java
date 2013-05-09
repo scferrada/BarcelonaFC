@@ -39,9 +39,8 @@ public class ActivoDaoImp extends AbstractDao<ActivoEntity, Integer> implements 
     }
 
     public void deletByType(String type) {
-        IDao dao = null;
         String query = "select a from ActivoEntity a where a.tipoActivo = (select t from TipoActivoEntity t where t.tipo=:type)";
-        Query q = HibernateUtil.getSession().createQuery(query).setParameter("type",type);
+        Query q = HibernateUtil.createQuery(query).setParameter("type",type);
         Iterator iterator = q.iterate();
         while(iterator.hasNext()){
             ActivoEntity activoEntity = (ActivoEntity) iterator.next();
@@ -51,8 +50,8 @@ public class ActivoDaoImp extends AbstractDao<ActivoEntity, Integer> implements 
 
     public int getSumAll() {
         String query = "select sum(a.valor) from ActivoEntity a";
-        Query q = HibernateUtil.getSession().createQuery(query);
-        int suma = Integer.parseInt((String) q.list().get(0));
+        Query q = HibernateUtil.getSessionFactory().openSession().createQuery(query);
+        int suma = Integer.parseInt((String) q.uniqueResult());
         return suma;
     }
 }
