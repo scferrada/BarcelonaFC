@@ -1,8 +1,10 @@
 package controller.impl;
 
 import controller.PasivoBean;
+import entity.PasivoEntity;
 
 import javax.ejb.Stateless;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,4 +15,18 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class PasivoBeanImpl implements PasivoBean{
+    @Override
+    public void save(PasivoEntity pasivoEntity) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public List<PasivoEntity> getAll() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void delete(PasivoEntity pasivoEntity) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

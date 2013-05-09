@@ -1,5 +1,6 @@
 package controller;
 
+import javax.ejb.Local;
 import javax.ejb.Remote;
 
 /**
@@ -9,6 +10,6 @@ import javax.ejb.Remote;
  * Time: 05:05 PM
  * To change this template use File | Settings | File Templates.
  */
-@Remote
+@Local
 public interface SocioBean {
 }
