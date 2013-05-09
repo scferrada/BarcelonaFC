@@ -1,5 +1,6 @@
 package util;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
@@ -32,8 +33,11 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-    public static Session getSession() {
-        Session hibernateSession = sessionFactory.getCurrentSession();
-        return hibernateSession;
+    public static Query createQuery(String hql){
+        return sessionFactory.openSession().createQuery(hql);
+    }
+
+    public static void closeSession() {
+        sessionFactory.getCurrentSession().close();
     }
 }
