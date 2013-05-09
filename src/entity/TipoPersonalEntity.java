@@ -3,8 +3,6 @@ package entity;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.Collection;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,17 +15,17 @@ import java.util.Collection;
 @Entity
 public class TipoPersonalEntity {
 
-    private int id;
+    private Integer id;
     private String tipo;
     private String descripcion;
 
     @javax.persistence.Column(name = "ID")
     @Id
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

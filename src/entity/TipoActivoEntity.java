@@ -18,17 +18,17 @@ import java.util.Collection;
 @Entity
 public class TipoActivoEntity {
 
-    private int id;
+    private Integer id;
     private String tipo;
     private String descripcion;
 
     @javax.persistence.Column(name = "ID")
     @Id
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -60,6 +60,7 @@ public class TipoActivoEntity {
         TipoActivoEntity that = (TipoActivoEntity) o;
 
         if (descripcion != null ? !descripcion.equals(that.descripcion) : that.descripcion != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (tipo != null ? !tipo.equals(that.tipo) : that.tipo != null) return false;
 
         return true;
@@ -67,7 +68,7 @@ public class TipoActivoEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (tipo != null ? tipo.hashCode() : 0);
         result = 31 * result + (descripcion != null ? descripcion.hashCode() : 0);
         return result;

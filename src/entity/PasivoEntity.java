@@ -1,7 +1,6 @@
 package entity;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,29 +12,29 @@ import java.math.BigInteger;
 @javax.persistence.Table(name = "PASIVO", schema = "BARCELONAFC", catalog = "")
 @Entity
 public class PasivoEntity {
-    private int id;
-    private int valor;
+    private Integer id;
+    private Integer valor;
     private EstadoPasivoEntity estadoPasivo;
 
     @javax.persistence.Column(name = "ID")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PASIVO")
     @SequenceGenerator(name = "SEQ_PASIVO", sequenceName = "SEQ_PASIVO")
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     @javax.persistence.Column(name = "VALOR")
     @Basic
-    public int getValor() {
+    public Integer getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(Integer valor) {
         this.valor = valor;
     }
 

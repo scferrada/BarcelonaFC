@@ -17,12 +17,12 @@ import java.util.Map;
 @Entity
 public class PersonalEntity {
 
-    private int id;
+    private Integer id;
     private String nombre;
     private String apellido;
     private Timestamp fechaNacimiento;
     private BigInteger contratado;
-    private int valorBase;
+    private Integer valorBase;
     private ContratoEntity contrato;
     private TipoPersonalEntity tipoPersonal;
     private NacionalidadEntity nacionalidad;
@@ -45,11 +45,11 @@ public class PersonalEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PERSONAL")
     @SequenceGenerator(name = "SEQ_PERSONAL", sequenceName = "SEQ_PERSONAL")
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -95,11 +95,11 @@ public class PersonalEntity {
 
     @javax.persistence.Column(name = "VALOR_BASE")
     @Basic
-    public int getValorBase() {
+    public Integer getValorBase() {
         return valorBase;
     }
 
-    public void setValorBase(int valorBase) {
+    public void setValorBase(Integer valorBase) {
         this.valorBase = valorBase;
     }
 
