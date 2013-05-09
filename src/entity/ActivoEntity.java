@@ -39,7 +39,7 @@ public class ActivoEntity {
         this.valor = valor;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @javax.persistence.JoinColumn(name = "TIPO_ACTIVO_ID", referencedColumnName = "ID", nullable = false)
     public TipoActivoEntity getTipoActivo() {
         return tipoActivo;

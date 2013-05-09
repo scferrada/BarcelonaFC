@@ -16,9 +16,9 @@ import java.util.List;
 @Local
 public interface PasivoBean {
 
-    public void save(PasivoEntity pasivoEntity);
-    public List<PasivoEntity> getAll();
-    public void delete(PasivoEntity pasivoEntity);
+    public boolean savePasivo(PasivoEntity pasivo);
+    public List<PasivoEntity> getAllPasives();
+    public boolean deletePasive(PasivoEntity pasivoEntity);
 
 
 }

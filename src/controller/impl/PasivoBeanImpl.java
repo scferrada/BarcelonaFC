@@ -1,9 +1,12 @@
 package controller.impl;
 
 import controller.PasivoBean;
+import dao.PasivoDao;
+import dao.impl.PasivoDaoImp;
 import entity.PasivoEntity;
 
 import javax.ejb.Stateless;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,18 +18,43 @@ import java.util.List;
  */
 @Stateless
 public class PasivoBeanImpl implements PasivoBean{
-    @Override
-    public void save(PasivoEntity pasivoEntity) {
-        //To change body of implemented methods use File | Settings | File Templates.
+
+    private PasivoDao pasivoDao;
+
+    public PasivoBeanImpl(){
+        pasivoDao = new PasivoDaoImp();
     }
 
     @Override
-    public List<PasivoEntity> getAll() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public boolean savePasivo(PasivoEntity pasivo) {
+        try{
+            pasivoDao.save(pasivo);
+            return true;
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return false;
+        }
     }
 
     @Override
-    public void delete(PasivoEntity pasivoEntity) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public List<PasivoEntity> getAllPasives() {
+        List<PasivoEntity> res = new ArrayList<PasivoEntity>();
+        try{
+            res = pasivoDao.findAll(PasivoEntity.class);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return res;
+    }
+
+    @Override
+    public boolean deletePasive(PasivoEntity pasivoEntity) {
+        try{
+            pasivoDao.delete(pasivoEntity);
+            return true;
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return false;
+        }
     }
 }

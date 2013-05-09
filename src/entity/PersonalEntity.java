@@ -3,6 +3,7 @@ package entity;
 import javax.persistence.*;
 import java.math.BigInteger;
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -29,6 +30,7 @@ public class PersonalEntity {
     private static Map<String, Double> factors;
 
     static {
+        factors = new HashMap<String, Double>();
         factors.put("arquero", 1.0);
         factors.put("defenza", 1.2);
         factors.put("mediocampista", 1.5);

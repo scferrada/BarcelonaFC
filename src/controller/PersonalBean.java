@@ -17,7 +17,7 @@ import java.util.List;
 @Local
 public interface PersonalBean {
 
-    public void save(PersonalEntity personalEntity);
+    public boolean save(PersonalEntity personalEntity);
     public List<PersonalEntity> getAll();
     public void delete(PersonalEntity personalEntity);
 }

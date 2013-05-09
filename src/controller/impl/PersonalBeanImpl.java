@@ -1,9 +1,12 @@
 package controller.impl;
 
 import controller.PersonalBean;
+import dao.PersonalDao;
+import dao.impl.PersonalDaoImp;
 import entity.PersonalEntity;
 
 import javax.ejb.Stateless;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,14 +18,33 @@ import java.util.List;
  */
 @Stateless
 public class PersonalBeanImpl implements PersonalBean{
+
+    private PersonalDao personalDao;
+
+    public PersonalBeanImpl(){
+        personalDao = new PersonalDaoImp();
+    }
+
     @Override
-    public void save(PersonalEntity personalEntity) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public boolean save(PersonalEntity personalEntity) {
+        try{
+            personalDao.save(personalEntity);
+            return true;
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public List<PersonalEntity> getAll() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        List<PersonalEntity> res = new ArrayList<PersonalEntity>();
+        try{
+            res = personalDao.findAll(PersonalEntity.class);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return res;
     }
 
     @Override

@@ -1,8 +1,15 @@
 package dao;
 
-import dao.impl.ActivoDaoImp;
+import controller.ActivoBean;
+import controller.impl.ActivoBeanImpl;
 import entity.ActivoEntity;
+import entity.TipoActivoEntity;
 import org.junit.Test;
+
+import java.math.BigInteger;
+import java.util.Date;
+
+import static junit.framework.Assert.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,9 +22,25 @@ public class ActivoTest {
 
     @Test
     public void sessionTest(){
-        ActivoDao activoDao = new ActivoDaoImp();
-        ActivoEntity activoEntity = new ActivoEntity();
-        activoEntity.se
+        ActivoBean bean = new ActivoBeanImpl();
+        ActivoEntity ac1 = makeActivo("capital", "desc1", 300);
+        bean.save(ac1);
+        ActivoEntity ac2 = bean.getAll().get(0);
+        assertEquals(ac1, ac2);
+        bean.delete(ac1);
+        assertTrue(bean.getAll().isEmpty());
+    }
+
+
+    private ActivoEntity makeActivo(String tipo, String descripcion, int valor) {
+        ActivoEntity res = new ActivoEntity();
+        TipoActivoEntity tae = new TipoActivoEntity();
+        tae.setId(2);
+        tae.setDescripcion(descripcion);
+        tae.setTipo(tipo);
+        res.setTipoActivo(tae);
+        res.setValor(valor);
+        return res;
     }
 
 }

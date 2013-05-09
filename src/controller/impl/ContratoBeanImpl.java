@@ -1,9 +1,12 @@
 package controller.impl;
 
 import controller.ContratoBean;
+import dao.ContratoDao;
+import dao.impl.ContratoDaoImp;
 import entity.ContratoEntity;
 
 import javax.ejb.Stateless;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,19 +19,43 @@ import java.util.List;
 @Stateless
 public class ContratoBeanImpl implements ContratoBean{
 
-    @Override
-    public void delete(ContratoEntity contratoEntity) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    private ContratoDao contratoDao;
+
+    public ContratoBeanImpl(){
+        contratoDao = new ContratoDaoImp();
     }
 
     @Override
-    public List<ContratoEntity> getAll() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public boolean deleteContract(ContratoEntity contratoEntity) {
+        try{
+            contratoDao.delete(contratoEntity);
+            return true;
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return false;
+        }
     }
 
     @Override
-    public void update(ContratoEntity contratoEntity) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public List<ContratoEntity> getAllContracts() {
+        List<ContratoEntity> res = new ArrayList<ContratoEntity>();
+        try{
+            res = contratoDao.findAll(ContratoEntity.class);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return res;
+    }
+
+    @Override
+    public boolean updateContract(ContratoEntity contratoEntity) {
+        try{
+            contratoDao.save(contratoEntity);
+            return true;
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return false;
+        }
     }
 
 }

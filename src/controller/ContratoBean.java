@@ -16,8 +16,8 @@ import java.util.List;
 @Local
 public interface ContratoBean {
 
-    public void delete(ContratoEntity contratoEntity);
-    public List<ContratoEntity> getAll();
-    public void update(ContratoEntity contratoEntity);
+    public boolean deleteContract(ContratoEntity contratoEntity);
+    public List<ContratoEntity> getAllContracts();
+    public boolean updateContract(ContratoEntity contratoEntity);
 
 }

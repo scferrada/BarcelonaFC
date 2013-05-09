@@ -16,6 +16,12 @@
     <rightPanel />
     <splitter proportion="0.5" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Barcelona FC$ActivoTest.coverage" NAME="ActivoTest Coverage Results" MODIFIED="1368139997632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Barcelona FC$ContratoTest.coverage" NAME="ContratoTest Coverage Results" MODIFIED="1368141694651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dao.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -67,63 +73,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UsuarioDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/UsuarioDaoImp.java">
+      <file leaf-file-name="ContratoBeanImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/impl/ContratoBeanImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="15" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
+            <state line="46" column="19" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#957#973#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivoTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/dao/ActivoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="42" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContratoTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/dao/ContratoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="51" selection-start="775" selection-end="775" vertical-scroll-proportion="0.5914894">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoActivoEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/TipoActivoEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="37" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/UsuarioBean.java">
+      <file leaf-file-name="AbstractDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/impl/AbstractDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="58" column="14" selection-start="1713" selection-end="1715" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsuarioBeanImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/impl/UsuarioBeanImpl.java">
+      <file leaf-file-name="UsuarioEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/UsuarioEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="9" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1557#1572#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocioBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/SocioBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocioBeanImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/impl/SocioBeanImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="2" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1164#1177#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PasivoBean.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/PasivoBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="17" selection-start="228" selection-end="228" vertical-scroll-proportion="0.37847868">
+            <state line="13" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,34 +136,34 @@
       <file leaf-file-name="PersonalEntity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entity/PersonalEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+            <state line="32" column="48" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatoContactoDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/DatoContactoDaoImp.java">
+      <file leaf-file-name="ActivoEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/ActivoEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+            <state line="41" column="40" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContratoDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/ContratoDaoImp.java">
+      <file leaf-file-name="ContratoBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/ContratoBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="47" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+            <state line="16" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivoDaoImp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/impl/ActivoDaoImp.java">
+      <file leaf-file-name="ActivoBeanImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/impl/ActivoBeanImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+            <state line="30" column="0" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,22 +179,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/entity/ContratoEntity.java" />
-        <option value="$PROJECT_DIR$/src/dao/impl/ContratoDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/dao/UsuarioDao.java" />
-        <option value="$PROJECT_DIR$/src/dao/impl/UsuarioDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/util/HibernateUtil.java" />
-        <option value="$PROJECT_DIR$/src/dao/impl/AbstractDao.java" />
-        <option value="$PROJECT_DIR$/src/entity/SocioEntity.java" />
-        <option value="$PROJECT_DIR$/src/dao/impl/SocioDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/dao/SocioDao.java" />
         <option value="$PROJECT_DIR$/src/dao/PersonalDao.java" />
-        <option value="$PROJECT_DIR$/src/entity/PersonalEntity.java" />
         <option value="$PROJECT_DIR$/src/dao/impl/PersonalDaoImp.java" />
         <option value="$PROJECT_DIR$/src/controller/UsuarioBean.java" />
         <option value="$PROJECT_DIR$/src/controller/impl/UsuarioBeanImpl.java" />
         <option value="$PROJECT_DIR$/src/controller/SocioBean.java" />
         <option value="$PROJECT_DIR$/src/controller/impl/SocioBeanImpl.java" />
+        <option value="$PROJECT_DIR$/src/controller/PasivoBean.java" />
+        <option value="$PROJECT_DIR$/src/controller/impl/PasivoBeanImpl.java" />
+        <option value="$PROJECT_DIR$/src/controller/impl/PersonalBeanImpl.java" />
+        <option value="$PROJECT_DIR$/src/controller/ContratoBean.java" />
+        <option value="$PROJECT_DIR$/src/controller/impl/ContratoBeanImpl.java" />
+        <option value="$PROJECT_DIR$/src/entity/PersonalEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/ActivoEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/TipoActivoEntity.java" />
+        <option value="$PROJECT_DIR$/test/dao/ActivoTest.java" />
+        <option value="$PROJECT_DIR$/test/dao/ContratoTest.java" />
       </list>
     </option>
   </component>
@@ -228,12 +232,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Barcelona FC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Barcelona FC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -312,80 +320,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Barcelona FC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -406,8 +352,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Persistence.ERD.MergeInherited" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
@@ -418,14 +364,44 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FirstTest">
+  <component name="RunManager" selected="JUnit.ContratoTest">
+    <configuration default="false" name="ActivoTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+      </extension>
+      <module name="Barcelona FC" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.ActivoTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="Default" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console" temporary="true">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="false" name="FirstTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="ContratoTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -436,7 +412,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.FirstTest" />
+      <option name="MAIN_CLASS_NAME" value="dao.ContratoTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -450,9 +426,7 @@
       <envs />
       <patterns />
       <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -475,6 +449,24 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -511,24 +503,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -542,20 +516,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="WebLogic Instance" factoryName="Local">
-      <option name="PORT" value="7001" />
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="WEBLOGIC_DOMAIN_LOG_FILE" enabled="true" />
-      <predefined_log_file id="WEBLOGIC_SERVER_LOG_FILE" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -582,6 +542,20 @@
       </option>
       <envs />
       <patterns />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="WebLogic Instance" factoryName="Local">
+      <option name="PORT" value="7001" />
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="WEBLOGIC_DOMAIN_LOG_FILE" enabled="true" />
+      <predefined_log_file id="WEBLOGIC_SERVER_LOG_FILE" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -677,10 +651,11 @@
         </option>
       </method>
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Query Language Console.Default" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.FirstTest" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ActivoTest" />
+      <item index="1" class="java.lang.String" itemvalue="Query Language Console.Default" />
       <item index="2" class="java.lang.String" itemvalue="WebLogic Instance.wl" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ContratoTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -698,7 +673,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -713,19 +688,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24051593" sideWeight="0.5479452" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27389985" sideWeight="0.24315068" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399841" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26742426" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43493152" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3444613" sideWeight="0.5479452" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4520548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -788,48 +764,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/PersonalDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="97" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/SocioDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="81" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoActivoDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/TipoPersonalDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/PasivoDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/EstadoPasivoDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/impl/DatoContactoDaoImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
@@ -851,60 +785,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/impl/UsuarioDaoImp.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/PasivoBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="15" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
+        <state line="20" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/impl/PasivoBeanImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="54" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#903#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/impl/PersonalBeanImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="19" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#936#952#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ContratoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/impl/ContratoBeanImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="19" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#957#973#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/PersonalEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+        <state line="32" column="48" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/UsuarioBean.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/impl/ActivoBeanImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+        <state line="30" column="0" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/ActivoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="40" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/TipoActivoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="37" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/impl/AbstractDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="14" selection-start="1713" selection-end="1715" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/UsuarioEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dao/ActivoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="42" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/impl/UsuarioBeanImpl.java">
+    <entry file="file://$PROJECT_DIR$/test/dao/ContratoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="9" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1557#1572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/SocioBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+        <state line="29" column="51" selection-start="775" selection-end="775" vertical-scroll-proportion="0.5914894">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/impl/SocioBeanImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="2" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1164#1177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/PasivoBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="228" selection-end="228" vertical-scroll-proportion="0.37847868">
-          <folding />
         </state>
       </provider>
     </entry>
