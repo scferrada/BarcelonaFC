@@ -48,4 +48,11 @@ public class PasivoDaoImp extends AbstractDao<PasivoEntity, Integer> implements 
             dao.delete(pasivoEntity);
         }
     }
+
+    public int getSumaAll(String estado) {
+        String query = "select sum(p.valor) from PasivoEntity p where p.estadoPasivo.estado =: estado";
+        Query q = HibernateUtil.getSession().createQuery(query).setParameter("estado",estado);
+        int suma = Integer.parseInt((String) q.list().get(0));
+        return suma;
+    }
 }
