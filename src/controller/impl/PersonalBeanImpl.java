@@ -1,8 +1,10 @@
 package controller.impl;
 
 import controller.PersonalBean;
+import entity.PersonalEntity;
 
 import javax.ejb.Stateless;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,4 +15,18 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class PersonalBeanImpl implements PersonalBean{
+    @Override
+    public void save(PersonalEntity personalEntity) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public List<PersonalEntity> getAll() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void delete(PersonalEntity personalEntity) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

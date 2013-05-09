@@ -1,8 +1,10 @@
 package controller.impl;
 
 import controller.ContratoBean;
+import entity.ContratoEntity;
 
 import javax.ejb.Stateless;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,4 +15,20 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class ContratoBeanImpl implements ContratoBean{
+
+    @Override
+    public void delete(ContratoEntity contratoEntity) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public List<ContratoEntity> getAll() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void update(ContratoEntity contratoEntity) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
 }

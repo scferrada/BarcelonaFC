@@ -1,6 +1,10 @@
 package controller;
 
+import entity.PasivoEntity;
+
+import javax.ejb.Local;
 import javax.ejb.Remote;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,6 +13,12 @@ import javax.ejb.Remote;
  * Time: 05:04 PM
  * To change this template use File | Settings | File Templates.
  */
-@Remote
+@Local
 public interface PasivoBean {
+
+    public void save(PasivoEntity pasivoEntity);
+    public List<PasivoEntity> getAll();
+    public void delete(PasivoEntity pasivoEntity);
+
+
 }
