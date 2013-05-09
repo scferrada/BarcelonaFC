@@ -2,12 +2,16 @@ package dao.impl;
 
 import dao.ContratoDao;
 import dao.IDao;
+import dao.PersonalDao;
 import entity.ContratoEntity;
 import entity.PersonalEntity;
 import org.hibernate.Query;
 import util.HibernateUtil;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,19 +22,19 @@ import java.sql.Timestamp;
  */
 public class ContratoDaoImp extends AbstractDao<ContratoEntity, Integer> implements ContratoDao {
 
+    @Override
     public void delete(ContratoEntity contratoEntity){
-        IDao dao = null;
-
-        String query = "select p from PersonalEntity p where p.contrato=:contratoEntity";
-        Query q = HibernateUtil.getSession().createQuery(query).setParameter("contratoEntity",contratoEntity);
-        PersonalEntity personalEntity = (PersonalEntity) q.iterate().next();
-        dao.delete(personalEntity);
-
-        query = "select s from SocioEntity s where s.contrato=:contratoEntity";
-        q = HibernateUtil.getSession().createQuery(query).setParameter("contratoEntity",contratoEntity);
-        personalEntity = (PersonalEntity) q.iterate().next();
-        dao.delete(personalEntity);
+        ContratoDao contratoDao = new ContratoDaoImp();
+        contratoDao.delete(contratoEntity);
     }
+
+    @Override
+    public void deleteCascade(ContratoEntity contrato) {
+        PersonalDao personalDao = new PersonalDaoImp();
+        ContratoDao contratoDao = new ContratoDaoImp();
+        PersonalEntity contratado = personalDao.getPersonalByContrato(contrato);
+    }
+
 
     public void deleteById(int id){
         String query = "delete from PersonalEntity p where p.contrato.id =: id";      //eliminamos al personal con esa fecha

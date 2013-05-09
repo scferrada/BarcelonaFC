@@ -14,6 +14,7 @@ import java.sql.Timestamp;
 public interface ContratoDao extends IDao<ContratoEntity, Integer> {
 
     public void delete(ContratoEntity contratoEntity);
+    public void deleteCascade(ContratoEntity contrato);
     public void deleteByFechaInicio(Timestamp fechaInicio);
     public void delteByFechaTermino(Timestamp fechaExpiracion);
     public void deleteByMensualidad(int mensualidad);
