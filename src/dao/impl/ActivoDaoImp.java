@@ -48,4 +48,11 @@ public class ActivoDaoImp extends AbstractDao<ActivoEntity, Integer> implements 
             dao.delete(activoEntity);
         }
     }
+
+    public int getSumAll() {
+        String query = "select sum(a.valor) from ActivoEntity a";
+        Query q = HibernateUtil.getSession().createQuery(query);
+        int suma = Integer.parseInt((String) q.list().get(0));
+        return suma;
+    }
 }

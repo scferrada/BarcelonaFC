@@ -3,6 +3,7 @@ package dao;
 import entity.SocioEntity;
 
 import java.math.BigInteger;
+import java.sql.Timestamp;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,8 +18,11 @@ public interface SocioDao extends IDao<SocioEntity, Integer> {
 
     public void delete(SocioEntity socioEntity);
     public void deleteById(int id);
+    public void deleteByNation(String nation);
     public void deleteByName(String name);
     public void deleteByLastName(String lastName);
+    public void deleteByBirth(Timestamp birth);
     public void deleteByHired(BigInteger seat);
-    public void deleteByNation(String nation);
+    public void deleteByContact(String dato);
+
 }

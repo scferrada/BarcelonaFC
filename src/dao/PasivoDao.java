@@ -15,4 +15,6 @@ public interface PasivoDao extends IDao<PasivoEntity, Integer> {
     public void deleteByValue(int value);
     public void deletByState(String state);
 
+    public int getSumaAll(String estado);
+
 }

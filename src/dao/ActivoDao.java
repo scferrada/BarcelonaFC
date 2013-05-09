@@ -15,4 +15,6 @@ public interface ActivoDao extends IDao<ActivoEntity, Integer>{
     public void deleteByValue(int value);
     public void deletByType(String type);
 
+    public int getSumAll();
+
 }
