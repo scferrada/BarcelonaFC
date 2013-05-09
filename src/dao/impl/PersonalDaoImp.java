@@ -19,24 +19,4 @@ import java.util.Iterator;
  * To change this template use File | Settings | File Templates.
  */
 public class PersonalDaoImp extends AbstractDao<PersonalEntity, Integer> implements PersonalDao {
-
-    public void save(PersonalEntity personal){
-        ContratoDao contratoDao = new ContratoDaoImp();
-        contratoDao.save(personal.getContrato());
-        save(personal);
-    }
-
-    @Override
-    public void delete(PersonalEntity personalEntity){
-        IDao dao = null;
-        dao.delete(personalEntity.getContratado());
-        dao.delete(personalEntity);
-    }
-
-    @Override
-    public PersonalEntity getPersonalByContrato(ContratoEntity contrato) {
-        String query = "select p from PersonalEntity p where p.contrato = :contrato";
-        Query q = HibernateUtil.getSessionFactory().openSession().createQuery(query).setParameter("contrato", contrato);
-        return this.findOne(q);
-    }
 }
