@@ -7,6 +7,7 @@ import org.hibernate.Query;
 import util.HibernateUtil;
 
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,42 +18,11 @@ import java.util.Iterator;
  */
 public class ActivoDaoImp extends AbstractDao<ActivoEntity, Integer> implements ActivoDao {
 
-    public void deleteById(int id) {
-        IDao dao = null;
-        String query = "select a from ActivoEntity a where a.id =: id";
-        Query q = HibernateUtil.getSession().createQuery(query).setParameter("id",id);
-        Iterator iterator = q.iterate();
-        ActivoEntity activoEntity = (ActivoEntity) iterator.next();
-        dao.delete(activoEntity);
-
-    }
-
-    public void deleteByValue(int value) {
-        IDao dao = null;
-        String query = "select a from ActivoEntity a where a.valor =: value";
-        Query q = HibernateUtil.getSession().createQuery(query).setParameter("value",value);
-        Iterator iterator = q.iterate();
-        while(iterator.hasNext()){
-            ActivoEntity activoEntity = (ActivoEntity) iterator.next();
-            dao.delete(activoEntity);
-        }
-    }
-
-    public void deletByType(String type) {
-        IDao dao = null;
-        String query = "select a from ActivoEntity a where a.tipoActivo = (select t from TipoActivoEntity t where t.tipo=:type)";
-        Query q = HibernateUtil.getSession().createQuery(query).setParameter("type",type);
-        Iterator iterator = q.iterate();
-        while(iterator.hasNext()){
-            ActivoEntity activoEntity = (ActivoEntity) iterator.next();
-            dao.delete(activoEntity);
-        }
-    }
-
     public int getSumAll() {
         String query = "select sum(a.valor) from ActivoEntity a";
-        Query q = HibernateUtil.getSession().createQuery(query);
-        int suma = Integer.parseInt((String) q.list().get(0));
+        Query q = HibernateUtil.createQuery(query);
+        int suma = Integer.parseInt((String) q.uniqueResult());
+        HibernateUtil.closeSession();
         return suma;
     }
 }

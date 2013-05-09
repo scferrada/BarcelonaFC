@@ -3,6 +3,7 @@ package dao;
 import entity.ContratoEntity;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,11 +13,5 @@ import java.sql.Timestamp;
  * To change this template use File | Settings | File Templates.
  */
 public interface ContratoDao extends IDao<ContratoEntity, Integer> {
-
-    public void delete(ContratoEntity contratoEntity);
-    public void deleteCascade(ContratoEntity contrato);
-    public void deleteByFechaInicio(Timestamp fechaInicio);
-    public void delteByFechaTermino(Timestamp fechaExpiracion);
-    public void deleteByMensualidad(int mensualidad);
 
 }

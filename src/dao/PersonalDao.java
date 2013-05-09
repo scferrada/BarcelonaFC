@@ -16,4 +16,5 @@ import java.sql.Timestamp;
  * To change this template use File | Settings | File Templates.
  */
 public interface PersonalDao extends IDao<PersonalEntity, Integer> {
+
 }

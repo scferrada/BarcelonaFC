@@ -11,10 +11,6 @@ import entity.ActivoEntity;
  */
 public interface ActivoDao extends IDao<ActivoEntity, Integer>{
 
-    public void deleteById(int id);
-    public void deleteByValue(int value);
-    public void deletByType(String type);
-
     public int getSumAll();
 
 }

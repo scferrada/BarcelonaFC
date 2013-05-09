@@ -11,4 +11,5 @@ import entity.TipoActivoEntity;
  * To change this template use File | Settings | File Templates.
  */
 public class TipoActivoDaoImp extends AbstractDao<TipoActivoEntity, Integer> implements TipoActivoDao {
+
 }
