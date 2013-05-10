@@ -11,6 +11,6 @@ import entity.PasivoEntity;
  */
 public interface PasivoDao extends IDao<PasivoEntity, Integer> {
 
-    public int getSumaAll(String estado);
+    public int getSumaEstado(String estado);
 
 }
