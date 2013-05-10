@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+    <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="connection.username">BARCELONAFC</property>
+    <property name="connection.password">barcelona</property>
+    <property name="dialect">org.hibernate.dialect.Oracle9iDialect</property>
+    <property name="show_sql">true</property>
+      <mapping class="entity.ActivoEntity"/>
+      <mapping class="entity.ContratoEntity"/>
+      <mapping class="entity.DatoContactoEntity"/>
+      <mapping class="entity.EstadoPasivoEntity"/>
+      <mapping class="entity.NacionalidadEntity"/>
+      <mapping class="entity.PasivoEntity"/>
+      <mapping class="entity.PersonalEntity"/>
+      <mapping class="entity.SocioEntity"/>
+      <mapping class="entity.TipoActivoEntity"/>
+      <mapping class="entity.TipoContactoEntity"/>
+      <mapping class="entity.TipoPersonalEntity"/>
+      <mapping class="entity.UsuarioEntity"/>
+  </session-factory>
+</hibernate-configuration>

@@ -70,4 +70,13 @@ public class TipoPersonalEntity {
         result = 31 * result + (descripcion != null ? descripcion.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "TipoPersonalEntity{" +
+                "id=" + id +
+                ", tipo='" + tipo + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                '}';
+    }
 }

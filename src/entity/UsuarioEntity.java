@@ -51,12 +51,10 @@ public class UsuarioEntity{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || !(o instanceof UsuarioEntity)) return false;
 
         UsuarioEntity that = (UsuarioEntity) o;
 
-        if (id != that.id) return false;
         if (nombreUsuario != null ? !nombreUsuario.equals(that.nombreUsuario) : that.nombreUsuario != null)
             return false;
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
@@ -70,5 +68,14 @@ public class UsuarioEntity{
         result = 31 * result + (nombreUsuario != null ? nombreUsuario.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "UsuarioEntity{" +
+                "id=" + id +
+                ", nombreUsuario='" + nombreUsuario + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

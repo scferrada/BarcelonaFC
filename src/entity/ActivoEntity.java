@@ -52,20 +52,31 @@ public class ActivoEntity {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof ActivoEntity)) return false;
 
         ActivoEntity that = (ActivoEntity) o;
 
-        if (id != that.id) return false;
-        if (valor != that.valor) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (tipoActivo != null ? !tipoActivo.equals(that.tipoActivo) : that.tipoActivo != null) return false;
+        if (valor != null ? !valor.equals(that.valor) : that.valor != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + valor;
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (valor != null ? valor.hashCode() : 0);
+        result = 31 * result + (tipoActivo != null ? tipoActivo.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "ActivoEntity{" +
+                "id=" + id +
+                ", valor=" + valor +
+                ", tipoActivo=" + tipoActivo +
+                '}';
     }
 }

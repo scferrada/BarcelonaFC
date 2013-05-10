@@ -54,8 +54,7 @@ public class TipoActivoEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof TipoActivoEntity)) return false;
 
         TipoActivoEntity that = (TipoActivoEntity) o;
 
@@ -72,5 +71,13 @@ public class TipoActivoEntity {
         result = 31 * result + (tipo != null ? tipo.hashCode() : 0);
         result = 31 * result + (descripcion != null ? descripcion.hashCode() : 0);
         return result;
+    }
+    @Override
+    public String toString() {
+        return "TipoActivoEntity{" +
+                "id=" + id +
+                ", tipo='" + tipo + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                '}';
     }
 }

@@ -19,5 +19,5 @@ public interface PersonalBean {
 
     public boolean save(PersonalEntity personalEntity);
     public List<PersonalEntity> getAll();
-    public void delete(PersonalEntity personalEntity);
+    public boolean delete(PersonalEntity personalEntity);
 }

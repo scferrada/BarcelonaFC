@@ -48,7 +48,13 @@ public class PersonalBeanImpl implements PersonalBean{
     }
 
     @Override
-    public void delete(PersonalEntity personalEntity) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public boolean delete(PersonalEntity personalEntity) {
+        try{
+            personalDao.delete(personalEntity);
+            return true;
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return false;
+        }
     }
 }

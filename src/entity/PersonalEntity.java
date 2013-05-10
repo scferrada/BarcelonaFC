@@ -21,7 +21,7 @@ public class PersonalEntity {
     private String nombre;
     private String apellido;
     private Timestamp fechaNacimiento;
-    private BigInteger contratado;
+    private Integer contratado;
     private Integer valorBase;
     private ContratoEntity contrato;
     private TipoPersonalEntity tipoPersonal;
@@ -85,11 +85,11 @@ public class PersonalEntity {
 
     @javax.persistence.Column(name = "CONTRATADO")
     @Basic
-    public BigInteger getContratado() {
+    public Integer getContratado() {
         return contratado;
     }
 
-    public void setContratado(BigInteger contratado) {
+    public void setContratado(Integer contratado) {
         this.contratado = contratado;
     }
 
@@ -113,7 +113,7 @@ public class PersonalEntity {
         this.contrato = contrato;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @javax.persistence.JoinColumn(name = "NACIONALIDAD_ID", referencedColumnName = "ID", nullable = false)
     public NacionalidadEntity getNacionalidad() {
         return nacionalidad;
@@ -123,7 +123,7 @@ public class PersonalEntity {
         this.nacionalidad = nacionalidad;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.ALL})
     @javax.persistence.JoinColumn(name = "TIPO_PERSONAL_ID", referencedColumnName = "ID", nullable = false)
     public TipoPersonalEntity getTipoPersonal() {
         return tipoPersonal;
@@ -142,30 +142,50 @@ public class PersonalEntity {
     }
 
     @Override
+    public String toString() {
+        return "PersonalEntity{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", contratado=" + contratado +
+                ", valorBase=" + valorBase +
+                ", contrato=" + contrato +
+                ", tipoPersonal=" + tipoPersonal +
+                ", nacionalidad=" + nacionalidad +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof PersonalEntity)) return false;
 
         PersonalEntity that = (PersonalEntity) o;
 
-        if (id != that.id) return false;
-        if (valorBase != that.valorBase) return false;
         if (apellido != null ? !apellido.equals(that.apellido) : that.apellido != null) return false;
         if (contratado != null ? !contratado.equals(that.contratado) : that.contratado != null) return false;
-        if (fechaNacimiento != null ? !fechaNacimiento.equals(that.fechaNacimiento) : that.fechaNacimiento != null)
-            return false;
-        return !(nombre != null ? !nombre.equals(that.nombre) : that.nombre != null);
+        if (contrato != null ? !contrato.equals(that.contrato) : that.contrato != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (nacionalidad != null ? !nacionalidad.equals(that.nacionalidad) : that.nacionalidad != null) return false;
+        if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
+        if (tipoPersonal != null ? !tipoPersonal.equals(that.tipoPersonal) : that.tipoPersonal != null) return false;
+        if (valorBase != null ? !valorBase.equals(that.valorBase) : that.valorBase != null) return false;
 
+        return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
         result = 31 * result + (apellido != null ? apellido.hashCode() : 0);
         result = 31 * result + (fechaNacimiento != null ? fechaNacimiento.hashCode() : 0);
         result = 31 * result + (contratado != null ? contratado.hashCode() : 0);
-        result = 31 * result + valorBase;
+        result = 31 * result + (valorBase != null ? valorBase.hashCode() : 0);
+        result = 31 * result + (contrato != null ? contrato.hashCode() : 0);
+        result = 31 * result + (tipoPersonal != null ? tipoPersonal.hashCode() : 0);
+        result = 31 * result + (nacionalidad != null ? nacionalidad.hashCode() : 0);
         return result;
     }
 }

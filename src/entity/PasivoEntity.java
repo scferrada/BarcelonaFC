@@ -38,7 +38,7 @@ public class PasivoEntity {
         this.valor = valor;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @javax.persistence.JoinColumn(name = "ESTADO_PASIVO_ID", referencedColumnName = "ID", nullable = false)
     public EstadoPasivoEntity getEstadoPasivo() {
         return estadoPasivo;
@@ -51,20 +51,31 @@ public class PasivoEntity {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof PasivoEntity)) return false;
 
         PasivoEntity that = (PasivoEntity) o;
 
-        if (id != that.id) return false;
-        if (valor != that.valor) return false;
+        if (estadoPasivo != null ? !estadoPasivo.equals(that.estadoPasivo) : that.estadoPasivo != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (valor != null ? !valor.equals(that.valor) : that.valor != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + valor;
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (valor != null ? valor.hashCode() : 0);
+        result = 31 * result + (estadoPasivo != null ? estadoPasivo.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "PasivoEntity{" +
+                "id=" + id +
+                ", valor=" + valor +
+                ", estadoPasivo=" + estadoPasivo +
+                '}';
     }
 }

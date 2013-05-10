@@ -72,15 +72,22 @@ public class ContratoEntity {
     }
 
     @Override
+    public String toString() {
+        return "ContratoEntity{" +
+                "id=" + id +
+                ", fechaInicio=" + fechaInicio +
+                ", fechaExpiracion=" + fechaExpiracion +
+                ", mensualidad=" + mensualidad +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        System.out.println("hello world!!!!!!!!");
+        if (o == null || !(o instanceof ContratoEntity)) return false;
 
         ContratoEntity that = (ContratoEntity) o;
 
-        if (fechaExpiracion != null ? !fechaExpiracion.equals(that.fechaExpiracion) : that.fechaExpiracion != null)
-            return false;
-        if (fechaInicio != null ? !fechaInicio.equals(that.fechaInicio) : that.fechaInicio != null) return false;
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (mensualidad != null ? !mensualidad.equals(that.mensualidad) : that.mensualidad != null) return false;
 

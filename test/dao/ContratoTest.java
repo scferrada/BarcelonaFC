@@ -32,7 +32,7 @@ public class ContratoTest {
 
     private ContratoEntity makeContract(int mensualidad) {
         ContratoEntity res = new ContratoEntity();
-        res.setFechaExpiracion(new Timestamp(new Date().getTime()));
+        res.setFechaExpiracion(new Timestamp(1000L));
         res.setFechaInicio(new Timestamp(0L));
         res.setMensualidad(mensualidad);
         return res;

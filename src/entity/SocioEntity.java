@@ -19,7 +19,7 @@ public class SocioEntity {
     private String nombre;
     private String apellido;
     private Timestamp fechaNacimiento;
-    private BigInteger derechoAsiento;
+    private Integer derechoAsiento;
     private ContratoEntity contrato;
     private NacionalidadEntity nacionalidad;
 
@@ -67,11 +67,11 @@ public class SocioEntity {
 
     @javax.persistence.Column(name = "DERECHO_ASIENTO")
     @Basic
-    public BigInteger getDerechoAsiento() {
+    public Integer getDerechoAsiento() {
         return derechoAsiento;
     }
 
-    public void setDerechoAsiento(BigInteger derechoAsiento) {
+    public void setDerechoAsiento(Integer derechoAsiento) {
         this.derechoAsiento = derechoAsiento;
     }
 
@@ -85,7 +85,7 @@ public class SocioEntity {
         this.contrato = contrato;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "NACIONALIDAD_ID", referencedColumnName = "ID")
     public NacionalidadEntity getNacionalidad() {
         return nacionalidad;
@@ -97,17 +97,12 @@ public class SocioEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || !(o instanceof SocioEntity)) return false;
 
         SocioEntity that = (SocioEntity) o;
 
         if (id != that.id) return false;
         if (apellido != null ? !apellido.equals(that.apellido) : that.apellido != null) return false;
-        if (derechoAsiento != null ? !derechoAsiento.equals(that.derechoAsiento) : that.derechoAsiento != null)
-            return false;
-        if (fechaNacimiento != null ? !fechaNacimiento.equals(that.fechaNacimiento) : that.fechaNacimiento != null)
-            return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
 
         return true;
@@ -121,5 +116,18 @@ public class SocioEntity {
         result = 31 * result + (fechaNacimiento != null ? fechaNacimiento.hashCode() : 0);
         result = 31 * result + (derechoAsiento != null ? derechoAsiento.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "SocioEntity{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", derechoAsiento=" + derechoAsiento +
+                ", contrato=" + contrato +
+                ", nacionalidad=" + nacionalidad +
+                '}';
     }
 }

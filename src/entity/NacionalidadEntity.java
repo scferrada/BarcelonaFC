@@ -58,4 +58,11 @@ public class NacionalidadEntity {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "NacionalidadEntity{" +
+                "id=" + id +
+                ", pais='" + pais + '\'' +
+                '}';
+    }
 }
