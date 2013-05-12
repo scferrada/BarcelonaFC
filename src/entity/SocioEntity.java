@@ -101,10 +101,13 @@ public class SocioEntity {
 
         SocioEntity that = (SocioEntity) o;
 
-        if (id != that.id) return false;
-        if (apellido != null ? !apellido.equals(that.apellido) : that.apellido != null) return false;
-        if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
-
+        if (!id.equals(that.id)){
+            System.out.println("false cause id");return false;}
+        if (apellido != null ? !apellido.equals(that.apellido) : that.apellido != null){
+            System.out.println("false cause last name"); return false;}
+        if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null){
+            System.out.println("false cause name"); return false;}
+        System.out.println("all ok");
         return true;
     }
 
