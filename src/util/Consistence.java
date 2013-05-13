@@ -13,22 +13,22 @@ import java.sql.Timestamp;
  */
 public class Consistence {
 
-    public void dontIntersect(Timestamp from, Timestamp to) throws InconsistentArgumentException {
+    static public void dontIntersect(Timestamp from, Timestamp to) throws InconsistentArgumentException {
         if(to.before(from))
             throw new InconsistentArgumentException("Dates are in wrong order");
     }
 
-    public void possitive(int test) throws InconsistentArgumentException {
+    static public void possitive(int test) throws InconsistentArgumentException {
         if(test <= 0)
             throw new InconsistentArgumentException("Number must be non-zero possitive integer");
     }
 
-    public void isNull(Object o) throws InconsistentArgumentException{
+    static public void isNull(Object o) throws InconsistentArgumentException{
         if(o!=null)
             throw new InconsistentArgumentException("Field must be null-content");
     }
 
-    public void isNotNull(Object o) throws InconsistentArgumentException{
+    static public void isNotNull(Object o) throws InconsistentArgumentException{
         if(o==null)
             throw new InconsistentArgumentException("Non-null field has null value");
     }

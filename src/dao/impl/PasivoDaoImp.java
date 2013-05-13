@@ -17,10 +17,19 @@ import java.util.Iterator;
  */
 public class PasivoDaoImp extends AbstractDao<PasivoEntity, Integer> implements PasivoDao {
 
+    @Override
+    public PasivoEntity findById(int id) {
+        String query = "select p from PasivoEntity p where p.id = :id";
+        Query q  = HibernateUtil.createQuery(query).setParameter("id", id);
+        PasivoEntity usr = findOne(q);
+        HibernateUtil.closeSession();
+        return usr;
+    }
+
     public int getSumaEstado(String estado) {
-        String query = "select sum(p.valor) from PasivoEntity p where p.estadoPasivo.estado =: estado";
+        String query = "select sum(p.valor) from PasivoEntity p where p.estadoPasivo.estado = :estado";
         Query q = HibernateUtil.createQuery(query).setParameter("estado",estado);
-        int suma = Integer.parseInt((String) q.uniqueResult());
+        int suma = Integer.parseInt(q.uniqueResult()+"");
         HibernateUtil.closeSession();
         return suma;
     }

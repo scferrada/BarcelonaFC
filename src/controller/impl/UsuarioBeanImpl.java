@@ -4,6 +4,7 @@ import controller.UsuarioBean;
 import dao.UsuarioDao;
 import dao.impl.UsuarioDaoImp;
 import entity.UsuarioEntity;
+import util.Consistence;
 
 import javax.ejb.Stateless;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class UsuarioBeanImpl implements UsuarioBean{
         try{
             comp = usuarioDao.findByUserName(usuario.getNombreUsuario());
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
         return comp != null && comp.getPassword().equals(usuario.getPassword());
@@ -41,9 +42,11 @@ public class UsuarioBeanImpl implements UsuarioBean{
     public boolean saveUser(UsuarioEntity usuario) {
         //VALIDATE
         try{
+            Consistence.isNotNull(usuario.getNombreUsuario());
+            Consistence.isNotNull(usuario.getPassword());
             usuarioDao.save(usuario);
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
         return true;
@@ -54,7 +57,7 @@ public class UsuarioBeanImpl implements UsuarioBean{
         try{
             usuarioDao.delete(usuario);
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
         return true;
@@ -66,7 +69,7 @@ public class UsuarioBeanImpl implements UsuarioBean{
         try{
             res = usuarioDao.findAll(UsuarioEntity.class);
         }catch(Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         return res;
     }

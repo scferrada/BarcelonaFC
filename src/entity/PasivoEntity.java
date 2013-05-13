@@ -62,13 +62,13 @@ public class PasivoEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (valor != null ? valor.hashCode() : 0);
-        result = 31 * result + (estadoPasivo != null ? estadoPasivo.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = id != null ? id.hashCode() : 0;
+//        result = 31 * result + (valor != null ? valor.hashCode() : 0);
+//        result = 31 * result + (estadoPasivo != null ? estadoPasivo.hashCode() : 0);
+//        return result;
+//    }
 
     @Override
     public String toString() {

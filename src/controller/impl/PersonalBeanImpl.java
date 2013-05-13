@@ -4,9 +4,12 @@ import controller.PersonalBean;
 import dao.PersonalDao;
 import dao.impl.PersonalDaoImp;
 import entity.PersonalEntity;
+import util.Consistence;
 
 import javax.ejb.Stateless;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,12 +29,14 @@ public class PersonalBeanImpl implements PersonalBean{
     }
 
     @Override
-    public boolean save(PersonalEntity personalEntity) {
+    public boolean save(PersonalEntity personal) {
         try{
-            personalDao.save(personalEntity);
+            Consistence.dontIntersect(personal.getFechaNacimiento(), new Timestamp(new Date().getTime()));
+            Consistence.possitive(personal.getValorBase());
+            personalDao.save(personal);
             return true;
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
     }
@@ -42,7 +47,7 @@ public class PersonalBeanImpl implements PersonalBean{
         try{
             res = personalDao.findAll(PersonalEntity.class);
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         return res;
     }
@@ -53,7 +58,7 @@ public class PersonalBeanImpl implements PersonalBean{
             personalDao.delete(personalEntity);
             return true;
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
     }

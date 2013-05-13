@@ -51,12 +51,12 @@ public class NacionalidadEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (pais != null ? pais.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (pais != null ? pais.hashCode() : 0);
+//        return result;
+//    }
 
     @Override
     public String toString() {

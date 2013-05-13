@@ -17,4 +17,6 @@ import java.sql.Timestamp;
  */
 public interface PersonalDao extends IDao<PersonalEntity, Integer> {
 
+    public PersonalEntity findById(int id);
+
 }

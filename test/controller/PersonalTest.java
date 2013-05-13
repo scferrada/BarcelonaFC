@@ -1,4 +1,4 @@
-package dao;
+package controller;
 
 import controller.PersonalBean;
 import controller.impl.PersonalBeanImpl;
@@ -6,6 +6,7 @@ import entity.ContratoEntity;
 import entity.NacionalidadEntity;
 import entity.PersonalEntity;
 import entity.TipoPersonalEntity;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Timestamp;
@@ -22,14 +23,29 @@ import static junit.framework.Assert.*;
  */
 public class PersonalTest {
 
+    PersonalBean bean;
+    @Before public void setUp(){
+        bean = new PersonalBeanImpl();
+    }
+
     @Test
     public void sessionTest(){
-        PersonalBean bean = new PersonalBeanImpl();
         PersonalEntity ps1 = makePersonal("Claudio", "Berroeta");
         bean.save(ps1);
         PersonalEntity ps2 = bean.getAll().get(0);
         assertEquals(ps1, ps2);
         bean.delete(ps1);
+        assertTrue(bean.getAll().isEmpty());
+    }
+
+    @Test
+    public void consistencyTest(){
+        PersonalEntity ps1 = makePersonal("hola", null);
+        ps1.setFechaNacimiento(null);
+        bean.save(ps1);
+        assertTrue(bean.getAll().isEmpty());
+        ps1.setFechaNacimiento(new Timestamp(1000L));
+        bean.save(ps1);
         assertTrue(bean.getAll().isEmpty());
     }
 

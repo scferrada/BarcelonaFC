@@ -1,8 +1,9 @@
-package dao;
+package controller;
 
 import controller.UsuarioBean;
 import controller.impl.UsuarioBeanImpl;
 import entity.UsuarioEntity;
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.*;
@@ -15,15 +16,34 @@ import static junit.framework.Assert.*;
  * To change this template use File | Settings | File Templates.
  */
 public class UsuarioTest {
+    UsuarioBean bean;
+    @Before public void setUp(){
+        bean= new UsuarioBeanImpl();
+    }
 
     @Test
     public void sessionTest(){
-        UsuarioBean bean = new UsuarioBeanImpl();
         UsuarioEntity us1 = makeUser("user", "pass");
         bean.saveUser(us1);
         UsuarioEntity us2 = bean.getAllUsers().get(0);
         assertEquals(us1, us2);
         bean.deleteUser(us2);
+        assertTrue(bean.getAllUsers().isEmpty());
+    }
+
+    @Test
+    public void consistencyTest(){
+        UsuarioEntity us1 = makeUser(null, null);
+        bean.saveUser(us1);
+        assertTrue(bean.getAllUsers().isEmpty());
+    }
+
+    @Test
+    public void authenticateTest(){
+        UsuarioEntity us1 = makeUser("user", "pass");
+        bean.saveUser(us1);
+        assertTrue(bean.authenticate(us1));
+        bean.deleteUser(us1);
         assertTrue(bean.getAllUsers().isEmpty());
     }
 

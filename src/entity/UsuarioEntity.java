@@ -62,13 +62,13 @@ public class UsuarioEntity{
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (nombreUsuario != null ? nombreUsuario.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (nombreUsuario != null ? nombreUsuario.hashCode() : 0);
+//        result = 31 * result + (password != null ? password.hashCode() : 0);
+//        return result;
+//    }
 
     @Override
     public String toString() {

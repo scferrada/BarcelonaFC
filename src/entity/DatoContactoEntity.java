@@ -73,10 +73,10 @@ public class DatoContactoEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (datoValor != null ? datoValor.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (datoValor != null ? datoValor.hashCode() : 0);
+//        return result;
+//    }
 }

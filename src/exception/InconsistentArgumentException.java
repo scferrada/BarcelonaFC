@@ -8,15 +8,8 @@ package exception;
  * To change this template use File | Settings | File Templates.
  */
 public class InconsistentArgumentException extends Exception {
-    public InconsistentArgumentException() {
-        super();
-    }
 
     public InconsistentArgumentException(String message) {
         super(message);
-    }
-
-    public InconsistentArgumentException(Exception ex){
-        super(ex);
     }
 }

@@ -11,6 +11,7 @@ import entity.ActivoEntity;
  */
 public interface ActivoDao extends IDao<ActivoEntity, Integer>{
 
+    public ActivoEntity findById(int id);
     public int getSumAll();
 
 }

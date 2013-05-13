@@ -1,9 +1,10 @@
-package dao;
+package controller;
 
 import controller.PasivoBean;
 import controller.impl.PasivoBeanImpl;
 import entity.EstadoPasivoEntity;
 import entity.PasivoEntity;
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.*;
@@ -17,14 +18,28 @@ import static junit.framework.Assert.*;
  */
 public class PasivoTest {
 
+    PasivoBean bean;
+    @Before public void setUp(){
+        bean  = new PasivoBeanImpl();
+    }
+
     @Test
     public  void sessionTest(){
-        PasivoBean bean = new PasivoBeanImpl();
         PasivoEntity pv1 = makePasivo(65888, "desc1", "state 1");
         bean.savePasivo(pv1);
         PasivoEntity pv2 = bean.getAllPasives().get(0);
         assertEquals(pv1, pv2);
         bean.deletePasive(pv1);
+        assertTrue(bean.getAllPasives().isEmpty());
+    }
+
+    @Test
+    public void consistencyTest(){
+        PasivoEntity pv1 = makePasivo(-9655, null, null);
+        bean.savePasivo(pv1);
+        assertTrue(bean.getAllPasives().isEmpty());
+        pv1.setValor(3666);
+        bean.savePasivo(pv1);
         assertTrue(bean.getAllPasives().isEmpty());
     }
 

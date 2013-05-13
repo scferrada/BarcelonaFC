@@ -1,9 +1,11 @@
-package dao;
+package controller;
 
 import controller.ActivoBean;
 import controller.impl.ActivoBeanImpl;
 import entity.ActivoEntity;
 import entity.TipoActivoEntity;
+import exception.InconsistentArgumentException;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigInteger;
@@ -20,14 +22,32 @@ import static junit.framework.Assert.*;
  */
 public class ActivoTest {
 
+    ActivoBean bean;
+    @Before
+    public void setUp(){
+        bean = new ActivoBeanImpl();
+    }
+
     @Test
     public void sessionTest(){
-        ActivoBean bean = new ActivoBeanImpl();
         ActivoEntity ac1 = makeActivo("capital", "desc1", 300);
         bean.save(ac1);
         ActivoEntity ac2 = bean.getAll().get(0);
         assertEquals(ac1, ac2);
         bean.delete(ac1);
+        assertTrue(bean.getAll().isEmpty());
+    }
+
+    @Test
+    public void consistencyTest(){
+        ActivoEntity ac1 = makeActivo("tipo asd", "desc asd", -966);
+        bean.save(ac1);
+        assertTrue(bean.getAll().isEmpty());
+    }
+    @Test
+    public void sqlTest(){
+        ActivoEntity ac1 = makeActivo(null, null, 699);
+        bean.save(ac1);
         assertTrue(bean.getAll().isEmpty());
     }
 

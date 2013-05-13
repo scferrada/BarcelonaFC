@@ -1,8 +1,10 @@
-package dao;
+package controller;
 
 import controller.ContratoBean;
 import controller.impl.ContratoBeanImpl;
+import entity.ActivoEntity;
 import entity.ContratoEntity;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Timestamp;
@@ -19,14 +21,37 @@ import static junit.framework.Assert.*;
  */
 public class ContratoTest {
 
+    ContratoBean bean;
+
+    @Before public void setUp(){
+        bean = new ContratoBeanImpl();
+    }
+
     @Test
     public void sessionTest(){
-        ContratoBean bean =  new ContratoBeanImpl();
         ContratoEntity cn1 = makeContract(3000000);
         bean.updateContract(cn1);
         ContratoEntity cn2 = bean.getAllContracts().get(0);
         assertEquals(cn1, cn2);
         bean.deleteContract(cn1);
+        assertTrue(bean.getAllContracts().isEmpty());
+    }
+
+    @Test
+    public void consistencyTest(){
+        ContratoEntity cn1 = makeContract(-699);
+        bean.updateContract(cn1);
+        cn1.setMensualidad(2566);
+        cn1.setFechaInicio(new Timestamp(new Date().getTime()));
+        bean.updateContract(cn1);
+        assertTrue(bean.getAllContracts().isEmpty());
+    }
+
+    @Test
+    public void sqlTest(){
+        ContratoEntity cn1 = makeContract(300);
+        cn1.setFechaExpiracion(null);
+        bean.updateContract(cn1);
         assertTrue(bean.getAllContracts().isEmpty());
     }
 

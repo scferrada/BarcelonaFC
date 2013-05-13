@@ -14,4 +14,7 @@ import java.util.List;
  */
 public interface ContratoDao extends IDao<ContratoEntity, Integer> {
 
+    public ContratoEntity findById(int id);
+
+
 }

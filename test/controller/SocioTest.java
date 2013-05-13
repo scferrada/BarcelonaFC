@@ -1,10 +1,11 @@
-package dao;
+package controller;
 
 import controller.SocioBean;
 import controller.impl.SocioBeanImpl;
 import entity.ContratoEntity;
 import entity.NacionalidadEntity;
 import entity.SocioEntity;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Timestamp;
@@ -20,15 +21,26 @@ import static junit.framework.Assert.*;
  * To change this template use File | Settings | File Templates.
  */
 public class SocioTest {
+    SocioBean bean;
+    @Before public void setUp(){
+        bean  = new SocioBeanImpl();
+    }
 
     @Test
     public void sessionTest(){
-        SocioBean bean = new SocioBeanImpl();
         SocioEntity sc1 = makeSocio("Victor", "Diaz");
         bean.saveAssociate(sc1);
         SocioEntity sc2 = bean.getAllAssociates().get(0);
         assertEquals(sc1, sc2);
         bean.deleteAssociate(sc2);
+        assertTrue(bean.getAllAssociates().isEmpty());
+    }
+
+    @Test
+    public void consistencyTest(){
+        SocioEntity sc1 = makeSocio("asd", "fgh");
+        sc1.setFechaNacimiento(null);
+        bean.saveAssociate(sc1);
         assertTrue(bean.getAllAssociates().isEmpty());
     }
 

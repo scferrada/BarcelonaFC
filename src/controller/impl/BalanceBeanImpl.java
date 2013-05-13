@@ -32,12 +32,12 @@ public class BalanceBeanImpl implements BalanceBean{
 
     @Override
     public int totalPasivosPendientes() {
-        return pasivoDao.getSumaEstado("Pendiente");
+        return pasivoDao.getSumaEstado("pendiente");
     }
 
     @Override
     public int totalPasivosPagados() {
-        return pasivoDao.getSumaEstado("Pagado");
+        return pasivoDao.getSumaEstado("pagado");
     }
 
     @Override

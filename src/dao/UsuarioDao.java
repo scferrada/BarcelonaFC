@@ -11,5 +11,6 @@ import entity.UsuarioEntity;
  */
 public interface UsuarioDao extends IDao<UsuarioEntity, Integer> {
 
+    public UsuarioEntity findById(int id);
     public UsuarioEntity findByUserName(String username);
 }

@@ -4,6 +4,7 @@ import controller.ContratoBean;
 import dao.ContratoDao;
 import dao.impl.ContratoDaoImp;
 import entity.ContratoEntity;
+import util.Consistence;
 
 import javax.ejb.Stateless;
 import java.util.ArrayList;
@@ -26,12 +27,12 @@ public class ContratoBeanImpl implements ContratoBean{
     }
 
     @Override
-    public boolean deleteContract(ContratoEntity contratoEntity) {
+    public boolean deleteContract(ContratoEntity contrato) {
         try{
-            contratoDao.delete(contratoEntity);
+            contratoDao.delete(contrato);
             return true;
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
     }
@@ -42,18 +43,22 @@ public class ContratoBeanImpl implements ContratoBean{
         try{
             res = contratoDao.findAll(ContratoEntity.class);
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         return res;
     }
 
     @Override
-    public boolean updateContract(ContratoEntity contratoEntity) {
+    public boolean updateContract(ContratoEntity contrato) {
         try{
-            contratoDao.save(contratoEntity);
+            //Consistence.isNotNull(contrato.getId());
+            //Consistence.isNotNull();
+            Consistence.dontIntersect(contrato.getFechaInicio(), contrato.getFechaExpiracion());
+            Consistence.possitive(contrato.getMensualidad());
+            contratoDao.save(contrato);
             return true;
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
     }

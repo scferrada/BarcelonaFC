@@ -13,4 +13,7 @@ import java.sql.Timestamp;
  * To change this template use File | Settings | File Templates.
  */
 public interface SocioDao extends IDao<SocioEntity, Integer> {
+
+    public SocioEntity findById(int id);
+
 }

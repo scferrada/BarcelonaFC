@@ -4,6 +4,7 @@ import controller.PasivoBean;
 import dao.PasivoDao;
 import dao.impl.PasivoDaoImp;
 import entity.PasivoEntity;
+import util.Consistence;
 
 import javax.ejb.Stateless;
 import java.util.ArrayList;
@@ -28,10 +29,11 @@ public class PasivoBeanImpl implements PasivoBean{
     @Override
     public boolean savePasivo(PasivoEntity pasivo) {
         try{
+            Consistence.possitive(pasivo.getValor());
             pasivoDao.save(pasivo);
             return true;
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
     }
@@ -42,7 +44,7 @@ public class PasivoBeanImpl implements PasivoBean{
         try{
             res = pasivoDao.findAll(PasivoEntity.class);
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         return res;
     }
@@ -53,7 +55,7 @@ public class PasivoBeanImpl implements PasivoBean{
             pasivoDao.delete(pasivoEntity);
             return true;
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
     }

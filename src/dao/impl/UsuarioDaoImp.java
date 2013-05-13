@@ -16,6 +16,15 @@ import util.HibernateUtil;
 public class UsuarioDaoImp extends AbstractDao<UsuarioEntity, Integer> implements UsuarioDao{
 
     @Override
+    public UsuarioEntity findById(int id) {
+        String query = "select a from UsuarioEntity a where a.id = :id";
+        Query q  = HibernateUtil.createQuery(query).setParameter("id", id);
+        UsuarioEntity usr = findOne(q);
+        HibernateUtil.closeSession();
+        return usr;
+    }
+
+    @Override
     public UsuarioEntity findByUserName(String username) {
         String sql = "select u from UsuarioEntity u where u.nombreUsuario = :username";
         Query query = HibernateUtil.createQuery(sql).setParameter("username", username);

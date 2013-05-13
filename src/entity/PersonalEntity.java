@@ -175,17 +175,17 @@ public class PersonalEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
-        result = 31 * result + (apellido != null ? apellido.hashCode() : 0);
-        result = 31 * result + (fechaNacimiento != null ? fechaNacimiento.hashCode() : 0);
-        result = 31 * result + (contratado != null ? contratado.hashCode() : 0);
-        result = 31 * result + (valorBase != null ? valorBase.hashCode() : 0);
-        result = 31 * result + (contrato != null ? contrato.hashCode() : 0);
-        result = 31 * result + (tipoPersonal != null ? tipoPersonal.hashCode() : 0);
-        result = 31 * result + (nacionalidad != null ? nacionalidad.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = id != null ? id.hashCode() : 0;
+//        result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
+//        result = 31 * result + (apellido != null ? apellido.hashCode() : 0);
+//        result = 31 * result + (fechaNacimiento != null ? fechaNacimiento.hashCode() : 0);
+//        result = 31 * result + (contratado != null ? contratado.hashCode() : 0);
+//        result = 31 * result + (valorBase != null ? valorBase.hashCode() : 0);
+//        result = 31 * result + (contrato != null ? contrato.hashCode() : 0);
+//        result = 31 * result + (tipoPersonal != null ? tipoPersonal.hashCode() : 0);
+//        result = 31 * result + (nacionalidad != null ? nacionalidad.hashCode() : 0);
+//        return result;
+//    }
 }

@@ -62,14 +62,14 @@ public class ContratoEntity {
     }
 
 
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (fechaInicio != null ? fechaInicio.hashCode() : 0);
-        result = 31 * result + (fechaExpiracion != null ? fechaExpiracion.hashCode() : 0);
-        result = 31 * result + mensualidad;
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (fechaInicio != null ? fechaInicio.hashCode() : 0);
+//        result = 31 * result + (fechaExpiracion != null ? fechaExpiracion.hashCode() : 0);
+//        result = 31 * result + mensualidad;
+//        return result;
+//    }
 
     @Override
     public String toString() {
@@ -83,7 +83,6 @@ public class ContratoEntity {
 
     @Override
     public boolean equals(Object o) {
-        System.out.println("hello world!!!!!!!!");
         if (o == null || !(o instanceof ContratoEntity)) return false;
 
         ContratoEntity that = (ContratoEntity) o;

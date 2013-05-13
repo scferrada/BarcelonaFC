@@ -4,6 +4,7 @@ import controller.ActivoBean;
 import dao.ActivoDao;
 import dao.impl.ActivoDaoImp;
 import entity.ActivoEntity;
+import util.Consistence;
 
 import javax.ejb.Stateless;
 import java.util.ArrayList;
@@ -26,11 +27,12 @@ public class ActivoBeanImpl implements ActivoBean{
 
 
     @Override
-    public void save(ActivoEntity activoEntity) {
+    public void save(ActivoEntity activo) {
         try{
-            activoDao.save(activoEntity);
+            Consistence.possitive(activo.getValor());
+            activoDao.save(activo);
         }catch (Exception e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -40,7 +42,7 @@ public class ActivoBeanImpl implements ActivoBean{
         try{
             lista = activoDao.findAll(ActivoEntity.class);
         }catch(Exception e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return lista;
     }
@@ -50,7 +52,6 @@ public class ActivoBeanImpl implements ActivoBean{
         try{
             activoDao.delete(activoEntity);
         }catch (Exception e){
-            e.printStackTrace();
-        }
+            System.out.println(e.getMessage());        }
     }
 }

@@ -9,6 +9,7 @@
     <property name="connection.username">BARCELONAFC</property>
     <property name="connection.password">barcelona</property>
     <property name="dialect">org.hibernate.dialect.Oracle9iDialect</property>
+    <property name="current_session_context_class">thread</property>
     <property name="show_sql">true</property>
       <mapping class="entity.ActivoEntity"/>
       <mapping class="entity.ContratoEntity"/>

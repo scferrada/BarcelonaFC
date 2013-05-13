@@ -65,13 +65,13 @@ public class TipoActivoEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (tipo != null ? tipo.hashCode() : 0);
-        result = 31 * result + (descripcion != null ? descripcion.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = id != null ? id.hashCode() : 0;
+//        result = 31 * result + (tipo != null ? tipo.hashCode() : 0);
+//        result = 31 * result + (descripcion != null ? descripcion.hashCode() : 0);
+//        return result;
+//    }
     @Override
     public String toString() {
         return "TipoActivoEntity{" +

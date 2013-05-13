@@ -111,15 +111,15 @@ public class SocioEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
-        result = 31 * result + (apellido != null ? apellido.hashCode() : 0);
-        result = 31 * result + (fechaNacimiento != null ? fechaNacimiento.hashCode() : 0);
-        result = 31 * result + (derechoAsiento != null ? derechoAsiento.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = id;
+//        result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
+//        result = 31 * result + (apellido != null ? apellido.hashCode() : 0);
+//        result = 31 * result + (fechaNacimiento != null ? fechaNacimiento.hashCode() : 0);
+//        result = 31 * result + (derechoAsiento != null ? derechoAsiento.hashCode() : 0);
+//        return result;
+//    }
 
     @Override
     public String toString() {

@@ -4,9 +4,12 @@ import controller.SocioBean;
 import dao.SocioDao;
 import dao.impl.SocioDaoImp;
 import entity.SocioEntity;
+import util.Consistence;
 
 import javax.ejb.Stateless;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,10 +31,12 @@ public class SocioBeanImpl implements SocioBean{
     @Override
     public boolean saveAssociate(SocioEntity socio) {
         try{
+            Consistence.dontIntersect(socio.getFechaNacimiento(), new Timestamp(new Date().getTime()));
+            Consistence.isNotNull(socio.getDerechoAsiento());
             socioDao.save(socio);
             return true;
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
     }
@@ -42,7 +47,7 @@ public class SocioBeanImpl implements SocioBean{
             socioDao.delete(socio);
             return true;
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             return false;
         }
     }
@@ -53,7 +58,7 @@ public class SocioBeanImpl implements SocioBean{
         try{
             res = socioDao.findAll(SocioEntity.class);
         }catch (Exception ex){
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         return res;
     }

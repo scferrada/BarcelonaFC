@@ -28,25 +28,24 @@ public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T,
         try{
             hibernateSession.saveOrUpdate(entity);
             hibernateSession.getTransaction().commit();
-            System.out.println("saved!");
         }catch (Exception ex){
             hibernateSession.getTransaction().rollback();
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         hibernateSession.close();
     }
 
-    public void merge(T entity) {
-        Session hibernateSession = this.getSession();
-        hibernateSession.beginTransaction();
-        try{
-            hibernateSession.merge(entity);
-            hibernateSession.getTransaction().commit();
-        }catch (Exception ex){
-            hibernateSession.getTransaction().rollback();
-        }
-        hibernateSession.close();
-    }
+//    public void merge(T entity) {
+//        Session hibernateSession = this.getSession();
+//        hibernateSession.beginTransaction();
+//        try{
+//            hibernateSession.merge(entity);
+//            hibernateSession.getTransaction().commit();
+//        }catch (Exception ex){
+//            hibernateSession.getTransaction().rollback();
+//        }
+//        hibernateSession.close();
+//    }
 
     public void delete(T entity) {
         Session hibernateSession = this.getSession();
@@ -69,13 +68,6 @@ public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T,
 
     public T findOne(Query query) {
         T t = (T) query.uniqueResult();
-        return t;
-    }
-
-    public T findByID(Class<T> clazz, Integer id) {
-        Session hibernateSession = this.getSession();
-        T t = (T) hibernateSession.get(clazz, id);
-        hibernateSession.close();
         return t;
     }
 

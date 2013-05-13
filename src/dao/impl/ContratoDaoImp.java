@@ -22,4 +22,12 @@ import java.util.List;
  */
 public class ContratoDaoImp extends AbstractDao<ContratoEntity, Integer> implements ContratoDao {
 
+    @Override
+    public ContratoEntity findById(int id) {
+        String query = "select c from ContratoEntity c where c.id = :id";
+        Query q  = HibernateUtil.createQuery(query).setParameter("id", id);
+        ContratoEntity usr = findOne(q);
+        HibernateUtil.closeSession();
+        return usr;
+    }
 }
