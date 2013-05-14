@@ -57,9 +57,8 @@ public class UsuarioEntity{
 
         if (nombreUsuario != null ? !nombreUsuario.equals(that.nombreUsuario) : that.nombreUsuario != null)
             return false;
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
+        return !(password != null ? !password.equals(that.password) : that.password != null);
 
-        return true;
     }
 
 //    @Override

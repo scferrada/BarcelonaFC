@@ -88,8 +88,7 @@ public class ContratoEntity {
         ContratoEntity that = (ContratoEntity) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (mensualidad != null ? !mensualidad.equals(that.mensualidad) : that.mensualidad != null) return false;
+        return !(mensualidad != null ? !mensualidad.equals(that.mensualidad) : that.mensualidad != null);
 
-        return true;
     }
 }

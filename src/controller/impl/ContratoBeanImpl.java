@@ -20,7 +20,7 @@ import java.util.List;
 @Stateless
 public class ContratoBeanImpl implements ContratoBean{
 
-    private ContratoDao contratoDao;
+    private final ContratoDao contratoDao;
 
     public ContratoBeanImpl(){
         contratoDao = new ContratoDaoImp();

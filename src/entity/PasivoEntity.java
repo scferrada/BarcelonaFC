@@ -57,9 +57,8 @@ public class PasivoEntity {
 
         if (estadoPasivo != null ? !estadoPasivo.equals(that.estadoPasivo) : that.estadoPasivo != null) return false;
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (valor != null ? !valor.equals(that.valor) : that.valor != null) return false;
+        return !(valor != null ? !valor.equals(that.valor) : that.valor != null);
 
-        return true;
     }
 
 //    @Override

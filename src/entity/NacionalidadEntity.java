@@ -45,10 +45,9 @@ public class NacionalidadEntity {
 
         NacionalidadEntity that = (NacionalidadEntity) o;
 
-        if (id != that.id) return false;
-        if (pais != null ? !pais.equals(that.pais) : that.pais != null) return false;
+        if (!id.equals(that.id)) return false;
+        return !(pais != null ? !pais.equals(that.pais) : that.pais != null);
 
-        return true;
     }
 
 //    @Override

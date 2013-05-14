@@ -18,7 +18,7 @@ import static junit.framework.Assert.*;
  */
 public class PasivoTest {
 
-    PasivoBean bean;
+    private PasivoBean bean;
     @Before public void setUp(){
         bean  = new PasivoBeanImpl();
     }

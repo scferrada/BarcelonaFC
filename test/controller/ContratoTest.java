@@ -21,7 +21,7 @@ import static junit.framework.Assert.*;
  */
 public class ContratoTest {
 
-    ContratoBean bean;
+    private ContratoBean bean;
 
     @Before public void setUp(){
         bean = new ContratoBeanImpl();

@@ -61,9 +61,8 @@ public class EstadoPasivoEntity {
 
         if (descripcion != null ? !descripcion.equals(that.descripcion) : that.descripcion != null) return false;
         if (estado != null ? !estado.equals(that.estado) : that.estado != null) return false;
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        return !(id != null ? !id.equals(that.id) : that.id != null);
 
-        return true;
     }
 
 //    @Override

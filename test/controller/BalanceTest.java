@@ -22,13 +22,13 @@ import static junit.framework.Assert.*;
  */
 public class BalanceTest {
 
-    ActivoEntity ac1;
-    ActivoEntity ac2;
-    PasivoEntity ps1;
-    PasivoEntity ps2;
-    ActivoBean acBean;
-    PasivoBean psBean;
-    BalanceBean balanceBean;
+    private ActivoEntity ac1;
+    private ActivoEntity ac2;
+    private PasivoEntity ps1;
+    private PasivoEntity ps2;
+    private ActivoBean acBean;
+    private PasivoBean psBean;
+    private BalanceBean balanceBean;
 
     @Before
     public void setUp(){

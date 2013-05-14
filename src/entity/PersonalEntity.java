@@ -27,7 +27,7 @@ public class PersonalEntity {
     private TipoPersonalEntity tipoPersonal;
     private NacionalidadEntity nacionalidad;
     @Transient
-    private static Map<String, Double> factors;
+    private static final Map<String, Double> factors;
 
     static {
         factors = new HashMap<String, Double>();
@@ -170,9 +170,8 @@ public class PersonalEntity {
         if (nacionalidad != null ? !nacionalidad.equals(that.nacionalidad) : that.nacionalidad != null) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
         if (tipoPersonal != null ? !tipoPersonal.equals(that.tipoPersonal) : that.tipoPersonal != null) return false;
-        if (valorBase != null ? !valorBase.equals(that.valorBase) : that.valorBase != null) return false;
+        return !(valorBase != null ? !valorBase.equals(that.valorBase) : that.valorBase != null);
 
-        return true;
     }
 
 //    @Override

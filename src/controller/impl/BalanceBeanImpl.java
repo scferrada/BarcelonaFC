@@ -17,8 +17,8 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class BalanceBeanImpl implements BalanceBean{
-    private ActivoDao activoDao;
-    private PasivoDao pasivoDao;
+    private final ActivoDao activoDao;
+    private final PasivoDao pasivoDao;
 
     public BalanceBeanImpl(){
         activoDao = new ActivoDaoImp();

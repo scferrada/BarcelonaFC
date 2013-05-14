@@ -22,7 +22,7 @@ import static junit.framework.Assert.*;
  */
 public class ActivoTest {
 
-    ActivoBean bean;
+    private ActivoBean bean;
     @Before
     public void setUp(){
         bean = new ActivoBeanImpl();

@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Stateless
 public class ActivoBeanImpl implements ActivoBean{
-    private ActivoDao activoDao;
+    private final ActivoDao activoDao;
 
     public ActivoBeanImpl(){
         activoDao = new ActivoDaoImp();

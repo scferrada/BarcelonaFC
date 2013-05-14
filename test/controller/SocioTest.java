@@ -21,7 +21,7 @@ import static junit.framework.Assert.*;
  * To change this template use File | Settings | File Templates.
  */
 public class SocioTest {
-    SocioBean bean;
+    private SocioBean bean;
     @Before public void setUp(){
         bean  = new SocioBeanImpl();
     }

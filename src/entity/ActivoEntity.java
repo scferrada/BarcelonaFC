@@ -58,9 +58,8 @@ public class ActivoEntity {
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (tipoActivo != null ? !tipoActivo.equals(that.tipoActivo) : that.tipoActivo != null) return false;
-        if (valor != null ? !valor.equals(that.valor) : that.valor != null) return false;
+        return !(valor != null ? !valor.equals(that.valor) : that.valor != null);
 
-        return true;
     }
 
 //    @Override

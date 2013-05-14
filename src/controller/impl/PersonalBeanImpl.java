@@ -22,7 +22,7 @@ import java.util.List;
 @Stateless
 public class PersonalBeanImpl implements PersonalBean{
 
-    private PersonalDao personalDao;
+    private final PersonalDao personalDao;
 
     public PersonalBeanImpl(){
         personalDao = new PersonalDaoImp();

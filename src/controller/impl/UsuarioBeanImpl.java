@@ -20,7 +20,7 @@ import java.util.List;
 @Stateless
 public class UsuarioBeanImpl implements UsuarioBean{
 
-    private UsuarioDao usuarioDao;
+    private final UsuarioDao usuarioDao;
 
     public UsuarioBeanImpl(){
         usuarioDao = new UsuarioDaoImp();

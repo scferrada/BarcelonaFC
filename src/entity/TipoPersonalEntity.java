@@ -56,11 +56,10 @@ public class TipoPersonalEntity {
 
         TipoPersonalEntity that = (TipoPersonalEntity) o;
 
-        if (id != that.id) return false;
+        if (!id.equals(that.id)) return false;
         if (descripcion != null ? !descripcion.equals(that.descripcion) : that.descripcion != null) return false;
-        if (tipo != null ? !tipo.equals(that.tipo) : that.tipo != null) return false;
+        return !(tipo != null ? !tipo.equals(that.tipo) : that.tipo != null);
 
-        return true;
     }
 
 //    @Override

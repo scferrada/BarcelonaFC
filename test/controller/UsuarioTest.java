@@ -16,7 +16,7 @@ import static junit.framework.Assert.*;
  * To change this template use File | Settings | File Templates.
  */
 public class UsuarioTest {
-    UsuarioBean bean;
+    private UsuarioBean bean;
     @Before public void setUp(){
         bean= new UsuarioBeanImpl();
     }

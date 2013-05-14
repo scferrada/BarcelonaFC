@@ -67,10 +67,9 @@ public class DatoContactoEntity {
 
         DatoContactoEntity that = (DatoContactoEntity) o;
 
-        if (id != that.id) return false;
-        if (datoValor != null ? !datoValor.equals(that.datoValor) : that.datoValor != null) return false;
+        if (!id.equals(that.id)) return false;
+        return !(datoValor != null ? !datoValor.equals(that.datoValor) : that.datoValor != null);
 
-        return true;
     }
 
 //    @Override

@@ -18,7 +18,7 @@ import java.util.List;
  */
 public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T, ID> {
 
-    protected Session getSession() {
+    private Session getSession() {
         return HibernateUtil.getSessionFactory().openSession();
     }
 
@@ -67,8 +67,7 @@ public abstract class AbstractDao<T, ID extends Serializable> implements IDao<T,
     }
 
     public T findOne(Query query) {
-        T t = (T) query.uniqueResult();
-        return t;
+        return (T) query.uniqueResult();
     }
 
     public List<T> findAll(Class<T> clazz) {

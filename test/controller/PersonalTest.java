@@ -23,7 +23,7 @@ import static junit.framework.Assert.*;
  */
 public class PersonalTest {
 
-    PersonalBean bean;
+    private PersonalBean bean;
     @Before public void setUp(){
         bean = new PersonalBeanImpl();
     }

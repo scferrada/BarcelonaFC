@@ -60,9 +60,8 @@ public class TipoActivoEntity {
 
         if (descripcion != null ? !descripcion.equals(that.descripcion) : that.descripcion != null) return false;
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (tipo != null ? !tipo.equals(that.tipo) : that.tipo != null) return false;
+        return !(tipo != null ? !tipo.equals(that.tipo) : that.tipo != null);
 
-        return true;
     }
 
 //    @Override

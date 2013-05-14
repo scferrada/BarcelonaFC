@@ -20,7 +20,7 @@ import java.util.List;
 @Stateless
 public class PasivoBeanImpl implements PasivoBean{
 
-    private PasivoDao pasivoDao;
+    private final PasivoDao pasivoDao;
 
     public PasivoBeanImpl(){
         pasivoDao = new PasivoDaoImp();
